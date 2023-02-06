@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './styles/index.scss';
-import { useTheme } from './providers/ThemeProvider';
+import { useTheme } from './providers/theme';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppRouter } from './providers/router';
 
