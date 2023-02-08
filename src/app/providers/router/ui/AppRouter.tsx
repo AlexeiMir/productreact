@@ -1,13 +1,24 @@
 import { Suspense } from "react";
-import { Route, Routes, useRoutes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { routeConfig } from "../routeConfig/routeConfig";
 
 export default function AppRouter() {
-  const elements = useRoutes(Object.values(routeConfig));
   return (
-    <Suspense fallback={<div>Загрузка...</div>}>
-      {elements}
-    </Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
+    <Routes>
+        {Object.values(routeConfig).map(({element, path}) => (
+            <Route
+                key={path}
+                path={path}
+                element={(
+                        <div className="page-wrapper">
+                            {element}
+                        </div>
+                )}
+            />
+        ))}
+    </Routes>
+</Suspense>
   )
 }
 

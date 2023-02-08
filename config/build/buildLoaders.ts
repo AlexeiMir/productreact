@@ -2,7 +2,7 @@ import { BuildOptions } from './types/config';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack'; //to access built-in plugins
 
-export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders({isDev, paths}: BuildOptions): webpack.RuleSetRule[] {
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
@@ -30,10 +30,26 @@ export function buildLoaders({isDev}: BuildOptions): webpack.RuleSetRule[] {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
-  }
+  };
+
+  const svgLoader = {
+    test: /\.svg$/,
+    // type: 'asset/resource',
+    use: ['@svgr/webpack'],
+    // generator: {
+    //   filename: paths.asserts.svg,
+    //   }
+    }
+    
+    const imgLoader = {
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    type: 'asset/resource',
+    }
 
   return [
     typescriptLoader,
     cssLoader,
+    svgLoader,
+    imgLoader
   ]
 }

@@ -3,9 +3,9 @@ import {
   useMemo,
   useState
 } from 'react'
+import { Theme } from 'shared/types/theme/theme';
 import {
   LOCAL_STORAGE_THEME_KEY,
-  Theme,
   ThemeContext
 } from '../lib/ThemeContext'
 
