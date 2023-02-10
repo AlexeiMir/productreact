@@ -1,8 +1,8 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
+  "css.validate": true,
+  "scss.validate": true,
   "stylelint.enable": true,
-"css.validate": true,
-"scss.validate": true,
 "stylelint.validate": [
 "css",
 "scss"
