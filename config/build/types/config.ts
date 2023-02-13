@@ -15,7 +15,7 @@ export type BuildPaths = {
 
 export interface BuildEnv {
   mode: BuildMode,
-  port: number
+  port: number,
 }
 
 export interface BuildOptions {
