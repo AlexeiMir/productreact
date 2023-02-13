@@ -4,10 +4,10 @@
 @import "themes/normal";
 
 .app {
-    min-height: 100vh;
-    font: var(--font-m);
-    color: var(--primary-color);
-    background: var(--bg-color);
+  font: var(--font-m);
+  color: var(--primary-color);
+  background: var(--bg-color);
+  min-height: 100vh;
 }
 
 .content-page {
@@ -17,4 +17,10 @@
 .page-wraper {
     flex-grow: 1;
     padding: 20px;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
