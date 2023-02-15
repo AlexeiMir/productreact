@@ -16,7 +16,9 @@ export function buildLoaders({ isDev, paths }: BuildOptions): webpack.RuleSetRul
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'
                             : '[hash:base64:8]',
-                        auto: ((resourcePath: string) => Boolean(resourcePath.includes('.module.'))),
+                        auto: ((resourcePath: string) => Boolean(
+                            resourcePath.includes('.module.'),
+                        )),
                     },
                 },
             },
@@ -54,11 +56,7 @@ export function buildLoaders({ isDev, paths }: BuildOptions): webpack.RuleSetRul
 
     const svgLoader = {
         test: /\.svg$/,
-        // type: 'asset/resource',
         use: ['@svgr/webpack'],
-    // generator: {
-    //   filename: paths.asserts.svg,
-    //   }
     };
 
     const imgLoader = {
