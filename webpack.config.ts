@@ -4,17 +4,12 @@ import { BuildPaths, BuildEnv } from './config/build/types/config';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 
 export default (env: BuildEnv) => {
-    const assertsPaths = {
-        svg: path.join('icons', '[name].[contenthash][ext]'),
-    };
-
     const paths: BuildPaths = {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         build: path.resolve(__dirname, 'build'),
         html: path.resolve(__dirname, 'public', 'index.html'),
         src: path.resolve(__dirname, 'src'),
         assetModule: path.join('images', '[name].[contenthash][ext]'),
-        asserts: assertsPaths,
     };
 
     const mode = env.mode || 'development';
