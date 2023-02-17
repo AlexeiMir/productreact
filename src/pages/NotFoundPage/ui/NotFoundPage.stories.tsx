@@ -14,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof NotFoundPage> = (args) => (
     <NotFoundPage
-        {...(args as typeof NotFoundPage)}
+        {...args}
     />
 );
 

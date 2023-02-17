@@ -14,7 +14,7 @@ export default {
 
 const Template: ComponentStory<typeof MainPage> = (args) => (
     <MainPage
-        {...(args as typeof MainPage)}
+        {...args}
     />
 );
 
