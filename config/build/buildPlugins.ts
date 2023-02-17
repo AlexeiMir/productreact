@@ -25,6 +25,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions):
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));
+        plugins.push(new ReactRefreshWebpackPlugin({
+            overlay: false,
+        }));
     }
     return plugins;
 }
