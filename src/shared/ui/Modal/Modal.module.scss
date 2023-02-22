@@ -7,6 +7,7 @@
     opacity: 0;
     pointer-events: none;
     width: 100%;
+    color: var(--primary-color);
 }
 
 .overlay {
@@ -24,16 +25,7 @@
     max-width: 60%;
     transition: 0.3s transform;
     transform: scale(0.5);
-}
-
-.content.light {
-    color: var(--inverted-primary-color);
-    background-color: var(--inverted-bg-color);
-}
-
-.content.dark {
-    color: var(--primary-color);
-    background-color: var(--bg-color);
+    background: var(--bg-color);
 }
 
 .opened {

@@ -73,14 +73,14 @@ const Modal = (props: ModalProps) => {
 
     return (
         <Portal keepMounted={isOpen}>
-            <div className={classNames(cls.Modal, mods, [className])}>
+            <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div
                     onClick={closeHandler}
                     className={cls.overlay}
                 >
                     <div
                         onClick={onContentClick}
-                        className={classNames(cls.content, {}, [cls[theme]])}
+                        className={classNames(cls.content, {}, [])}
                     >
                         {children}
                     </div>
