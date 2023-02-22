@@ -18,6 +18,8 @@
   "Not found": "",
   "Throw error": "",
   "Toggle": "Toggle",
+  "decrement": "decrement",
+  "increment": "increment",
   "Войти": "Войти",
   "Выкинуть ": "",
   "Выкинуть ошибку": "Throw error",
