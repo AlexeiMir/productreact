@@ -15,8 +15,9 @@ import cls from './Modal.module.scss';
 interface ModalProps {
   children: ReactNode,
   className?: string,
-  isOpen: boolean,
-  onClose: () => void
+  isOpen?: boolean,
+  lazy?: boolean,
+  onClose?: () => void
 }
 
 const ANIMATION_DELAY = 300;
@@ -26,11 +27,26 @@ const Modal = (props: ModalProps) => {
         children,
         className,
         isOpen,
+        lazy,
         onClose,
     } = props;
     const { theme } = useTheme();
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+            setIsClosing(true);
+            timeRef.current = setTimeout(() => {
+                setIsClosing(false);
+            }, ANIMATION_DELAY);
+        }
+        return () => {
+            setIsMounted(false);
+        };
+    }, [isOpen]);
 
     const closeHandler = useCallback(() => {
         if (onClose) {
@@ -71,8 +87,12 @@ const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
+    if (lazy && !isMounted) {
+        return null;
+    }
+
     return (
-        <Portal keepMounted={isOpen}>
+        <Portal>
             <div className={classNames(cls.Modal, mods, [className, theme])}>
                 <div
                     onClick={closeHandler}
