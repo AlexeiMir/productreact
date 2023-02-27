@@ -1,5 +1,6 @@
 {
   "": "",
+  "Ajhvf ": "Ajhvf ",
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit,                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
     "": "",
     "                Ut enim ad minim veniam,                quis nostrud                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat": {
@@ -20,9 +21,15 @@
   "Toggle": "Toggle",
   "decrement": "decrement",
   "increment": "increment",
-  "Введите имя": "Введите имя",
-  "Введите пароль": "Введите пароль",
-  "Войти": "Войти",
+  "В": "В",
+  "Вs": "Вs",
+  "Вsq": "Вsq",
+  "Введите имя": "Enter username",
+  "Введите пароль": "Enter password",
+  "Войти": "Login",
+  "Вы ввели неверный логин или пароль": "Вы ввели неверный логин или пароль",
+  "Выйти": "Exit",
+  "Выйь": "Выйь",
   "Выкинуть ": "",
   "Выкинуть ошибку": "Throw error",
   "Главная": "Main",
@@ -30,5 +37,7 @@
   "О сайте": "About",
   "Обновить страницу": "Refresh page",
   "Произошла непредвиденная ошибка": "Appear error",
+  "Форма авторизауц": "Форма авторизауц",
+  "Форма авторизации": "Auth form",
   "Язык": "English"
 }

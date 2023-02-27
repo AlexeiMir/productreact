@@ -1,3 +1,3 @@
-import { StateSheme } from 'app/providers/StoreProvider/config/StateSheme';
+import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 
-export const getCounter = (state: StateSheme) => state.counter;
+export const getCounter = (state: StateSchema) => state.counter;
