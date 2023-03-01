@@ -67,17 +67,16 @@ const Modal = (props: ModalProps) => {
         e.stopPropagation();
     }, []);
 
-    const onKeyDown = useCallback((e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-            closeHandler();
-        }
-    }, [closeHandler]);
-
     useEffect(() => () => {
         clearTimeout(timeRef.current);
     }, []);
 
     useEffect(() => {
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                closeHandler();
+            }
+        };
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
         }
@@ -85,7 +84,7 @@ const Modal = (props: ModalProps) => {
         return () => {
             window.removeEventListener('keydown', onKeyDown);
         };
-    }, [isOpen, onKeyDown]);
+    }, [isOpen, closeHandler]);
 
     if (lazy && !isMounted) {
         return null;

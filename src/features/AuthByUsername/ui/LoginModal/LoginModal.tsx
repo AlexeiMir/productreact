@@ -26,7 +26,7 @@ const LoginModal = ({
             className={classNames('', {}, [className])}
         >
             <Suspense fallback={<Loader />}>
-                <LoginFormAsync />
+                <LoginFormAsync onSuccess={onClose} />
             </Suspense>
         </Modal>
     );

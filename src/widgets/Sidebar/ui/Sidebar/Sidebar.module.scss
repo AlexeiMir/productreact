@@ -23,31 +23,11 @@
     gap: 10px;
 }
 
-.item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.link {
-    opacity: 1;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
-}
-
 .collapsed {
     width: var(--sidebar-width-collapsed);
 
     .switchers {
         flex-direction: column;
-    }
-
-    .link {
-        width: 0;
-        opacity: 0;
-        transition: 0.2s opacity;
     }
 }
 
