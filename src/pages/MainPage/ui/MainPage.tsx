@@ -1,9 +1,9 @@
 import { BugButton } from 'app/providers/ErrorBoundary';
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui';
 
-const MainPage: FC = () => {
+const MainPage = () => {
     const { t } = useTranslation('main');
     const [value, setValue] = useState('');
 

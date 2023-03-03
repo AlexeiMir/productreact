@@ -5,7 +5,6 @@ import { Sidebar } from 'widgets/Sidebar/ui/Sidebar/Sidebar';
 describe('Sidebar', () => {
     test('test render', () => {
         componentRender(<Sidebar />);
-        screen.debug();
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
     test('test toggle', () => {

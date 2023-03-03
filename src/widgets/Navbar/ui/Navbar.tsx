@@ -5,6 +5,7 @@ import { LoginModal } from 'features/AuthByUsername';
 import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
+import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
@@ -30,6 +31,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
     }, [setIsAuthModal]);
 
     const onLogout = useCallback(() => {
+        localStorage.removeItem(USER_LOCALSTORAGE_KEY);
         dispatch(userActions.logout());
     }, [dispatch]);
 
