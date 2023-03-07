@@ -2,8 +2,8 @@ import { ReducersMapObject } from '@reduxjs/toolkit';
 import { Story } from '@storybook/react';
 import { StoreProvider } from 'app/providers/StoreProvider';
 import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
-import { profileReducer } from 'entities/Profile';
 import { loginReducer } from 'features/AuthByUsername';
+import { profileReducer } from 'features/EditableProfileCard';
 import { ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducersList = {

@@ -13,6 +13,8 @@ export default function App() {
 
     useEffect(() => {
         const userFromStorage = localStorage.getItem(USER_LOCALSTORAGE_KEY);
+        console.log('userFromStorage', userFromStorage);
+
         if (userFromStorage) {
             const user = JSON.parse(userFromStorage);
             dispatch(userActions.initAuthData(user));
