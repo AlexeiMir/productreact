@@ -1,5 +1,4 @@
 import {
-    AnyAction,
     CombinedState,
     EnhancedStore,
     Reducer,
@@ -15,9 +14,9 @@ import { NavigateOptions, To } from 'react-router-dom';
 export interface StateSchema {
   counter: CounterSchema,
   user: UserSchema,
-  profile: ProfileSchema,
   // Асинхронный редьюсер
   loginForm?: LoginSchema
+  profile?: ProfileSchema,
 }
 
 export type StateSchemaKey = keyof StateSchema;

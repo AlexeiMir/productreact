@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'shared/types/theme/theme';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
+import avatar from 'shared/asserts/tests/storybook.jpg';
 import { ProfileCard } from './ProfileCard';
 
 export default {
@@ -18,13 +18,24 @@ const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...
 
 export const Primary = Template.bind({});
 Primary.args = {
+    data: {
+        username: 'admin',
+        age: 22,
+        country: Country.Ukraine,
+        lastname: 'ulbi tv',
+        first: 'asd',
+        city: 'asf',
+        currency: Currency.USD,
+        avatar,
+    },
 };
 
-Primary.decorators = [StoreDecorator({
-    profile: {
-        data: {
-            first: 'wsdwd',
-            lastname: 'wcwc',
-        },
-    },
-})];
+export const withError = Template.bind({});
+withError.args = {
+    error: 'error',
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    isLoading: true,
+};
