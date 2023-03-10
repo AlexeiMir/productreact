@@ -1,30 +1,13 @@
 import webpack from 'webpack'; // to access built-in plugins
+import { buildBabelLoder } from './loaders/buildBabelLoder';
 import { buildCssLoader } from './loaders/buildCssLoader';
 import { BuildOptions } from './types/config';
 
-export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
+export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
+    const { isDev } = options;
     const cssLoader = buildCssLoader(isDev);
 
-    const babelLoader = {
-        test: /\.(js|jsx|tsx)$/,
-        exclude: /node_modules/,
-        use: {
-            loader: 'babel-loader',
-            options: {
-                presets: ['@babel/preset-env'],
-                plugins: [
-                    ['i18next-extract',
-                        {
-                            locales: ['ru', 'en'],
-                            keyAsDefaultValue: true,
-                            // saveMissing: true,
-                            outputPath: 'public/locales/{{locale}}/{{ns}}.json',
-                        },
-                    ],
-                ],
-            },
-        },
-    };
+    const babelLoader = buildBabelLoder(options);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
