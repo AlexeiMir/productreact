@@ -1,6 +1,7 @@
 import { userActions } from 'entities/User';
+import { getUserInited } from 'entities/User/model/selectors/getUserInited/getUserInited';
 import { Suspense, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { USER_LOCALSTORAGE_KEY } from 'shared/const/localstorage';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/Navbar';
@@ -10,10 +11,10 @@ import { AppRouter } from './providers/router';
 
 export default function App() {
     const dispatch = useDispatch();
+    const inited = useSelector(getUserInited);
 
     useEffect(() => {
         const userFromStorage = localStorage.getItem(USER_LOCALSTORAGE_KEY);
-        console.log('userFromStorage', userFromStorage);
 
         if (userFromStorage) {
             const user = JSON.parse(userFromStorage);
@@ -27,7 +28,7 @@ export default function App() {
                 <Navbar />
                 <div className="content-page">
                     <Sidebar />
-                    <AppRouter />
+                    {inited && <AppRouter />}
                 </div>
             </Suspense>
         </div>
