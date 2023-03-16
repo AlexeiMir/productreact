@@ -3,7 +3,6 @@ import {
     Suspense,
     useCallback,
 } from 'react';
-import { useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import { AppRouteProps } from 'shared/config/routes';
 import { PageLoader } from 'widgets/PageLoader/PageLoader';
@@ -11,7 +10,7 @@ import { routeConfig } from '../routeConfig/routeConfig';
 import { RequireAuth } from './RequireAuth';
 
 function AppRouter() {
-    const renderWithValue = useCallback((route: AppRouteProps) => {
+    const renderWithWrapper = useCallback((route: AppRouteProps) => {
         const element = (
             <Suspense fallback={<PageLoader />}>
                 <div className="page-wrapper">
@@ -36,7 +35,7 @@ function AppRouter() {
 
     return (
         <Routes>
-            {Object.values(routeConfig).map(renderWithValue)}
+            {Object.values(routeConfig).map(renderWithWrapper)}
         </Routes>
     );
 }

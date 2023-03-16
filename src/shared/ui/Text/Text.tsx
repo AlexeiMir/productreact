@@ -3,6 +3,8 @@ import { classNames } from 'shared/lib/classNames/classNames';
 
 import cls from './Text.module.scss';
 
+// type ValueOf<T> = T[keyof T]
+
 export enum TextTheme {
   PRIMARY = 'primary',
   ERROR = 'error'
@@ -14,12 +16,26 @@ export enum TextAlign {
   CENTER = 'center'
 }
 
+export enum TextSize {
+  M = 'size_m',
+  L = 'size_l',
+}
+
+// export const textSize = {
+//     M: 'size_m',
+//     L: 'size_l',
+//     XL: 'size_xl',
+// } as const;
+
+// export type TextSize = ValueOf<typeof textSize>
+
 interface TextProps {
 className?: string,
 title?: string,
   text?: string,
   theme?: TextTheme,
-  align?: TextAlign
+  align?: TextAlign,
+  size?: TextSize
 }
 
 const Text = memo((props: TextProps) => {
@@ -29,9 +45,15 @@ const Text = memo((props: TextProps) => {
         text,
         theme = TextTheme.PRIMARY,
         align = TextAlign.LEFT,
+        size = TextSize.M,
     } = props;
     return (
-        <div className={classNames(cls.Text, {}, [className, cls[theme], cls[align]])}>
+        <div className={classNames(
+            cls.Text,
+            {},
+            [className, cls[theme], cls[align], cls[size]],
+        )}
+        >
             {title && <p className={cls.title}>{title}</p>}
             {text && <p className={cls.text}>{text}</p>}
         </div>

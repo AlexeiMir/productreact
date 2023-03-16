@@ -1,5 +1,5 @@
 import webpack from 'webpack'; // to access built-in plugins
-import { buildBabelLoder } from './loaders/buildBabelLoder';
+import { buildBabelLoader } from './loaders/buildBabelLoader';
 import { buildCssLoader } from './loaders/buildCssLoader';
 import { BuildOptions } from './types/config';
 
@@ -7,7 +7,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     const { isDev } = options;
     const cssLoader = buildCssLoader(isDev);
 
-    const babelLoader = buildBabelLoder(options);
+    const babelLoader = buildBabelLoader(options);
 
     const typescriptLoader = {
         test: /\.tsx?$/,
