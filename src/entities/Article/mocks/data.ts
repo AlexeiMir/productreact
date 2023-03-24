@@ -1,22 +1,22 @@
-import axios from 'axios';
-import { userActions } from 'entities/User';
-import { TestAsyncThunk } from 'shared/lib/test/TestAsyncThunk/TestAsyncThunk';
-import { Article } from '../../types/article';
-import { fetchArticleById } from './fetchArticleById';
+/* eslint-disable max-len */
+import { Article } from '../model/types/article';
 
-const article: Article = {
+export const articleMock = {
     id: '1',
-    title: 'Javascript news',
+    title: 'Javascript news Javascript news Javascript news',
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     user: {
         id: '1',
         username: 'Alex',
+        avatar: 'https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"',
     },
     createdAt: '26.02.2022',
     type: [
         'IT',
+        'ECONOMICS',
+        'SCIENCE',
     ],
     blocks: [
         {
@@ -78,33 +78,11 @@ const article: Article = {
             ],
         },
     ],
-};
+} as Article;
 
-describe('fetchArticleById.test.ts', () => {
-    test('success', async () => {
-        const id = '1';
-        const thunk = new TestAsyncThunk(fetchArticleById);
-        thunk.api.get.mockReturnValue(Promise.resolve({ data: article }));
-
-        const result = await thunk.callThunk(id);
-
-        expect(thunk.dispatch).toHaveBeenCalledTimes(2);
-        expect(thunk.api.get).toHaveBeenCalled();
-        expect(result.meta.requestStatus).toBe('fulfilled');
-        expect(result.payload).toEqual(article);
-    });
-    test('error get article detail', async () => {
-        const id = '15';
-        const thunk = new TestAsyncThunk(fetchArticleById);
-
-        thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
-
-        const result = await thunk.callThunk(id);
-
-        expect(thunk.dispatch).toHaveBeenCalledTimes(2);
-        expect(thunk.api.get).toHaveBeenCalled();
-
-        expect(result.meta.requestStatus).toBe('rejected');
-        expect(result.payload).toBe('error');
-    });
-});
+export const articlesMock = new Array(9)
+    .fill(0)
+    .map((item, index) => ({
+        ...articleMock,
+        id: String(index),
+    }));
