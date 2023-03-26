@@ -32,6 +32,7 @@ const CountrySelect = memo(({
     })), []);
     return (
         <Select
+            key={value}
             value={value}
             onChange={onChangeHandler}
             label={t('Укажите вашу страну')}

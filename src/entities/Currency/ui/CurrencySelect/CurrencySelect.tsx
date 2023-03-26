@@ -31,6 +31,7 @@ const CurrencySelect = memo(({
     })), []);
     return (
         <Select
+            key={value}
             value={value}
             onChange={onChangeHandler}
             label={t('Укажите вашу валюту')}
