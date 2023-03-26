@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { ArticleDetailsComment } from 'features/ArticleDetailsComment';
-import { Button } from 'shared/ui';
+import { Button, Page } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routes';
 import { fetchCommentsByArticleId } from '../../model/services/fetchCommentsByArticleId';
@@ -46,15 +46,15 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 {t('Статья не найдена')}
-            </div>
+            </Page>
         );
     }
 
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames('', {}, [className])}>
+            <Page className={classNames('', {}, [className])}>
                 <Button onClick={onBackToList} theme={ButtonTheme.OUTLINE}>
                     {t('Назад к списку')}
                 </Button>
@@ -64,7 +64,7 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                     commentsIsLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
 
     );

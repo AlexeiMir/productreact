@@ -69,7 +69,7 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
 
     return (
         <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
-            <Card>
+            <Card onClick={onOpenArticle}>
                 <div className={cls.imageWrapper}>
                     {articleImg}
                     <Text text={article.createdAt} className={cls.date} />

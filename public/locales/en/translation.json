@@ -1,44 +1,10 @@
 {
-  "": "",
-  " ": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
-  "Ajhvf ": "Ajhvf ",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": "",
-    "                Ut enim ad minim veniam,                quis nostrud                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat": {
-      "": ""
-    },
-    " Ut enim ad minim veniam,                quis nostrud                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat": {
-      "": ""
-    }
-  },
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": ""
-  },
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": ""
-  },
   "Not found": "",
   "Profile page": "Profile page",
-  "Read more ": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
   "Throw error": "",
   "Toggle": "Toggle",
   "decrement": "decrement",
   "increment": "increment",
-  "В": "В",
-  "Вs": "Вs",
-  "Вsq": "Вsq",
   "Ваша фамилия": "Ваша фамилия",
   "Ваше имя": "Ваше имя",
   "Введите имя": "Enter username",
@@ -87,5 +53,6 @@
       }
     }
   },
+  "Читать далее ...": "Read more",
   "Язык": "English"
 }

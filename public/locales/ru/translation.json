@@ -1,28 +1,4 @@
 {
-  "": "",
-  " ": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  },
-  "Ajhvf ": "Ajhvf ",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": "",
-    "                Ut enim ad minim veniam,                quis nostrud                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat": {
-      "": ""
-    },
-    " Ut enim ad minim veniam,                quis nostrud                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat": {
-      "": ""
-    }
-  },
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": ""
-  },
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua": {
-    "": ""
-  },
   "Not found": "",
   "Profile page": "Profile page",
   "Read more ": {
@@ -79,7 +55,6 @@
   "Укажите вашу страну": "Укажите вашу страну",
   "Форма авторизауц": "Форма авторизауц",
   "Форма авторизации": "Форма авторизации",
-  "Чит": "Чит",
   "Читать далее ": {
     "": {
       "": {
@@ -87,5 +62,6 @@
       }
     }
   },
+  "Читать далее ...": "Читать далее",
   "Язык": "Русский"
 }
