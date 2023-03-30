@@ -1,4 +1,12 @@
-export { ArticleView } from './model/types/article';
+export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
+
+export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
+
+export {
+    ArticleView,
+    ArticleSortField,
+    ArticleType,
+} from './model/types/article';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
 export { articleDetailsReducer } from './model/slice/articleDetailsSlice';

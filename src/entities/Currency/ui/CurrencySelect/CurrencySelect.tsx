@@ -21,8 +21,8 @@ const CurrencySelect = memo(({
 }: CurrencySelectProps) => {
     const { t } = useTranslation();
 
-    const onChangeHandler = useCallback((value: string) => {
-        onChange?.(value as Currency);
+    const onChangeHandler = useCallback((value: Currency) => {
+        onChange?.(value);
     }, [onChange]);
 
     const options = useMemo(() => Object.entries(Currency).map(([name, value]) => ({

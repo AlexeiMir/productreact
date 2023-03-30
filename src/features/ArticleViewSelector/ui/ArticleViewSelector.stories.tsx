@@ -1,12 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { Theme } from 'shared/types/theme/theme';
 import { ArticleViewSelector } from './ArticleViewSelector';
 
 export default {
-    title: 'shared/ArticleViewSelector',
+    title: 'features/ArticleViewSelector',
     component: ArticleViewSelector,
     argTypes: {
         backgroundColor: { control: 'color' },

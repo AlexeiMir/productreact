@@ -1,5 +1,7 @@
 import axios from 'axios';
+import { ArticleSortField } from 'entities/Article';
 import { TestAsyncThunk } from 'shared/lib/test/TestAsyncThunk/TestAsyncThunk';
+import { articlesPageActions } from '../../slices/articlesPageSlice';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
 import { initArticlesPage } from './initArticlesPage';
 
@@ -19,10 +21,13 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(new URLSearchParams('sort=title&order=asc&search=typescript'));
 
-        expect(thunk.dispatch).toBeCalledTimes(4);
-        expect(fetchArticlesList).toHaveBeenCalledWith({ page: 1 });
+        expect(thunk.dispatch).toBeCalledTimes(7);
+        expect(thunk.dispatch).toHaveBeenCalledWith(
+            articlesPageActions.setSort('title' as ArticleSortField),
+        );
+        expect(fetchArticlesList).toHaveBeenCalled();
     });
 
     test('fetchAritcleList not called, already inited', async () => {
@@ -38,7 +43,7 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk();
+        await thunk.callThunk(new URLSearchParams('sort=title&order=asc&search=typescript'));
 
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticlesList).not.toHaveBeenCalled();

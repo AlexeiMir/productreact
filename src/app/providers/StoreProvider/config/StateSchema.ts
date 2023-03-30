@@ -10,12 +10,14 @@ import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ProfileSchema } from 'features/EditableProfileCard';
+import { UISchema } from 'features/UI';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {
   counter: CounterSchema,
   user: UserSchema,
+  ui: UISchema,
   // Асинхронный редьюсер
   loginForm?: LoginSchema
   profile?: ProfileSchema,
