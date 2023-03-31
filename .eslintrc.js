@@ -48,7 +48,7 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'i18next/no-literal-string': ['error', {
             markupOnly: true,
-            ignoreAttribute: ['data-testid', 'to'],
+            ignoreAttribute: ['data-testid', 'to', 'target'],
         }],
         'max-len': ['error', {
             ignoreComments: true,
@@ -58,6 +58,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
+        'arrow-body-style': 'off',
     },
     globals: {
         __IS_DEV__: true,

@@ -11,7 +11,11 @@ import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ProfileSchema } from 'features/EditableProfileCard';
 import { UISchema } from 'features/UI';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import {
+    ArticleDetailsCommentsSchema,
+    ArticleDetailsPageRecommendationsSchema,
+    ArticlesDetailsPageSchema,
+} from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 
 export interface StateSchema {
@@ -22,9 +26,9 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema,
   articleDetails?: ArticleDetailsSchema,
-  articleDetailsComments: ArticleDetailsCommentsSchema,
   addCommentForm?: AddCommentFormSchema,
-  articlesPage?: ArticlesPageSchema
+  articlesPage?: ArticlesPageSchema,
+  articleDetailsPage?: ArticlesDetailsPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
