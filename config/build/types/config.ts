@@ -6,6 +6,8 @@ export type BuildPaths = {
   html: string,
   src: string,
   assetModule: string,
+  locales: string,
+  buildLocales: string
 }
 
 export interface BuildEnv {

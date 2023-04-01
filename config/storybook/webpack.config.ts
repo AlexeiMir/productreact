@@ -10,6 +10,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
         entry: '',
         assetModule: '',
         src: path.resolve(__dirname, '..', '..', 'src'),
+        locales: path.resolve(__dirname, '..', '..', 'public', 'locales'),
+        buildLocales: path.resolve(__dirname, '..', '..', 'build', 'locales'),
 
     };
     if (config.resolve) {
