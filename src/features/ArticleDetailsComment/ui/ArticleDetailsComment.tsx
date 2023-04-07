@@ -7,7 +7,7 @@ import { memo, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { AddCommentForm, Comment, CommentList } from 'entities/Comment';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import cls from './ArticleDetailsComment.module.scss';
+import { VStack } from 'shared/ui/Stack';
 import { getAddCommentFormError, getAddCommentFormText } from '../model/selectors/addCommentFormSelectors';
 import { addCommentFormActions } from '../model/slice/addCommentFormSlice';
 import { sendComment } from '../model/services/sendComment';
@@ -43,7 +43,7 @@ const ArticleDetailsComment = memo((props: ArticleDetailsCommentProps) => {
     ]);
 
     return (
-        <div className={classNames(cls.ArticleDetailsComment, {}, [className])}>
+        <VStack gap="8" max className={classNames('', {}, [className])}>
             <AddCommentForm
                 text={text}
                 error={error}
@@ -54,7 +54,7 @@ const ArticleDetailsComment = memo((props: ArticleDetailsCommentProps) => {
                 isLoading={commentsIsLoading}
                 comments={comments}
             />
-        </div>
+        </VStack>
     );
 });
 

@@ -7,6 +7,7 @@ import { memo } from 'react';
 import { Button, Input } from 'shared/ui';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { addCommentFormReducer } from 'features/ArticleDetailsComment';
+import { HStack } from 'shared/ui/Stack';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
@@ -32,7 +33,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
     const { t } = useTranslation();
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     value={text}
                     className={cls.input}
@@ -40,7 +41,7 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                     placeholder={t('Введите текст комментария')}
                 />
                 <Button onClick={onClick}>{t('Отправить')}</Button>
-            </div>
+            </HStack>
         </DynamicModuleLoader>
     );
 });
