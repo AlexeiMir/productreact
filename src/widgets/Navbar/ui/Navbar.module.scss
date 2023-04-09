@@ -7,10 +7,9 @@
     background: var(--inverted-bg-color);
 }
 
-.links {
-    display: flex;
+.links,
+.dropdown {
     margin-left: auto;
-    gap: 15px;
 }
 
 .appName {

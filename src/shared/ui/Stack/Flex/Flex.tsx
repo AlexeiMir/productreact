@@ -2,6 +2,8 @@ import {
     ReactNode,
     DetailedHTMLProps,
     HTMLAttributes,
+    ElementType,
+    ComponentProps,
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
 
@@ -14,18 +16,25 @@ type FlexGap = '4' | '8' | '16' | '32';
 
 type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
-export interface FlexProps extends DivProps {
+export interface FlexOwnProps<E extends ElementType = ElementType> extends DivProps {
   className?: string;
   children: ReactNode;
   justify?: FlexJustify;
   align?: FlexAlign;
   direction?: FlexDirection;
   gap?: FlexGap;
-  max?: boolean
-  wrap?: boolean
+  max?: boolean;
+  wrap?: boolean;
+  tag?: E;
 }
 
-const Flex = (props: FlexProps) => {
+export type FlexProps<E extends ElementType> = FlexOwnProps<E> & Omit<ComponentProps<E>, keyof FlexOwnProps<E>>;
+
+export type TagsVariants = 'div' | 'section';
+
+const Flex = <
+E extends ElementType = TagsVariants,
+T extends TagsVariants = E extends TagsVariants? E : never>(props: FlexProps<T>) => {
     const {
         className,
         children,
@@ -35,8 +44,10 @@ const Flex = (props: FlexProps) => {
         gap,
         max,
         wrap,
-
+        tag,
     } = props;
+
+    const Tag = tag || 'div';
 
     const classes = [
         className,
@@ -51,7 +62,7 @@ const Flex = (props: FlexProps) => {
         [cls.wrap]: wrap,
     };
     return (
-        <div
+        <Tag
             className={classNames(
                 cls.Flex,
                 mods,
@@ -59,7 +70,7 @@ const Flex = (props: FlexProps) => {
             )}
         >
             {children}
-        </div>
+        </Tag>
     );
 };
 

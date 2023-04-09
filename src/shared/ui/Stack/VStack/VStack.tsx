@@ -1,6 +1,6 @@
-import { Flex, FlexProps } from '../Flex/Flex';
+import { Flex, FlexProps, TagsVariants } from '../Flex/Flex';
 
-type VStackProps = Omit<FlexProps, 'direction'>
+type VStackProps = Omit<FlexProps<TagsVariants>, 'direction'>
 
 const VStack = (props: VStackProps) => {
     const { align = 'start' } = props;
