@@ -1,3 +1,4 @@
+import { rtkApi } from 'shared/api/rtkApi';
 import {
     CombinedState,
     EnhancedStore,
@@ -12,8 +13,6 @@ import { LoginSchema } from 'features/AuthByUsername';
 import { ProfileSchema } from 'features/EditableProfileCard';
 import { UISchema } from 'features/UI';
 import {
-    ArticleDetailsCommentsSchema,
-    ArticleDetailsPageRecommendationsSchema,
     ArticlesDetailsPageSchema,
 } from 'pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
@@ -22,6 +21,7 @@ export interface StateSchema {
   counter: CounterSchema,
   user: UserSchema,
   ui: UISchema,
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>,
   // Асинхронный редьюсер
   loginForm?: LoginSchema
   profile?: ProfileSchema,

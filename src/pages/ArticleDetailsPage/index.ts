@@ -4,7 +4,8 @@ export { ArticleDetailsPageRecommendationsSchema } from './model/types/ArticleDe
 export {
     articleDetailsCommentsActions,
     articleDetailsCommentsReducer,
-} from './model/slices/articleDetailsCommentsSlice';
+} from '../../features/ArticleDetailsComment/model/slice/articleDetailsCommentsSlice';
 
-export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
+export { ArticleDetailsCommentsSchema } from
+    '../../features/ArticleDetailsComment/model/types/ArticleDetailsCommentsSchema';
 export { ArticleDetailsPageAsync as ArticleDetailsPage } from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
