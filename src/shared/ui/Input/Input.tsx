@@ -82,6 +82,7 @@ const Input = memo(({
                     onBlur={onBlur}
                     onSelect={onSelect}
                     readOnly={readonly}
+                    {...otherProps}
                 />
                 {caretIsVisible && (
                     <span
