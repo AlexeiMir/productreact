@@ -27,6 +27,8 @@
     .switchers {
         flex-direction: column;
     }
+
+    z-index: 10000;
 }
 
 .collapseBtn {
