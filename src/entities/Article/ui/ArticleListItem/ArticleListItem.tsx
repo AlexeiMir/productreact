@@ -11,9 +11,10 @@ import { Card } from 'shared/ui/Card/Card';
 import { AppLink, Avatar, Button } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { RoutePath } from 'shared/config/routes';
-import { Article, ArticleTextBlock, ArticleView } from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { ArticleView } from '../../model/consts/articleConsts';
 
 interface ArticleListItemProps {
   className?: string,

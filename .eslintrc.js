@@ -36,7 +36,7 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'no-shadow': 'off',
-        'no-unused-vars': 'warn',
+        'no-unused-vars': 'off',
         'import/prefer-default-export': 'off',
         'react/require-default-props': 'off',
         'react/function-component-definition': 'off',

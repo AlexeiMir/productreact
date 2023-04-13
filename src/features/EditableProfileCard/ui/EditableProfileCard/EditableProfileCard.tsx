@@ -22,7 +22,7 @@ import { getProfileIsLoading } from '../../model/selectors/getProfileIsLoading/g
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm';
 import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader';
 import cls from './EditableProfileCard.module.scss';
-import { ValidateProfileError } from '../../model/types/profile';
+import { ValidateProfileError } from '../../model/consts/validateConsts';
 
 interface EditableProfileCardProps {
   className?: string,
