@@ -9,6 +9,7 @@ import {
     useState,
 } from 'react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 
 import cls from './Modal.module.scss';
@@ -64,10 +65,6 @@ const Modal = (props: ModalProps) => {
         [cls.isClosing]: isClosing,
     };
 
-    const onContentClick = useCallback((e: MouseEvent) => {
-        e.stopPropagation();
-    }, []);
-
     useEffect(() => () => {
         clearTimeout(timeRef.current);
     }, []);
@@ -94,16 +91,11 @@ const Modal = (props: ModalProps) => {
     return (
         <Portal>
             <div className={classNames(cls.Modal, mods, [className, theme])}>
+                <Overlay onClick={closeHandler} />
                 <div
-                    onClick={closeHandler}
-                    className={cls.overlay}
+                    className={classNames(cls.content, {}, [])}
                 >
-                    <div
-                        onClick={onContentClick}
-                        className={classNames(cls.content, {}, [])}
-                    >
-                        {children}
-                    </div>
+                    {children}
                 </div>
             </div>
         </Portal>

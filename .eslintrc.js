@@ -60,6 +60,7 @@ module.exports = {
                 'role',
                 'as',
                 'tag',
+                'border',
             ],
         }],
         'max-len': ['error', {

@@ -3,8 +3,10 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Menu } from '@headlessui/react';
 import { Fragment, ReactNode } from 'react';
 import { DropdownDirection } from 'shared/types/ui/ui';
+import { AppLink } from 'shared/ui/AppLink/AppLink';
 import cls from './Dropdown.module.scss';
-import { AppLink } from '../AppLink/AppLink';
+import { mapDirectionClass } from '../../styles/consts';
+import popupCls from '../../styles/popup.module.scss';
 
 interface DropdownItem {
   disabled?: boolean;
@@ -20,13 +22,6 @@ interface DropdownProps {
   items: DropdownItem[]
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-    'bottom left': cls.optionsBottomLeft,
-    'bottom right': cls.optionsBottomRight,
-    'top right': cls.optionsTopRight,
-    'top left': cls.optionsTopLeft,
-};
-
 const Dropdown = (props: DropdownProps) => {
     const {
         className,
@@ -38,16 +33,16 @@ const Dropdown = (props: DropdownProps) => {
     const menuClasses = [mapDirectionClass[direction]];
 
     return (
-        <Menu as="div" className={classNames(cls.Dropdown, {}, [className])}>
+        <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
             <Menu.Button className={cls.btn}>{ trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
-                {items.map((item) => {
+                {items.map((item, index) => {
                     const content = ({ active }: {active: boolean}) => (
                         <button
                             type="button"
                             disabled={item.disabled}
                             onClick={item.onClick}
-                            className={classNames(cls.item, { [cls.active]: active }, [className])}
+                            className={classNames(cls.item, { [popupCls.active]: active }, [className])}
                         >
                             {item.content}
                         </button>
@@ -56,6 +51,7 @@ const Dropdown = (props: DropdownProps) => {
                     if (item.href) {
                         return (
                             <Menu.Item
+                                key={index}
                                 disabled={item.disabled}
                                 as={AppLink}
                                 to={item.href}
@@ -66,7 +62,7 @@ const Dropdown = (props: DropdownProps) => {
                     }
 
                     return (
-                        <Menu.Item as={Fragment}>
+                        <Menu.Item key={index} as={Fragment}>
                             {content}
                         </Menu.Item>
                     );
