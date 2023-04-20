@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { componentRender } from 'shared/lib/test/componentRender/componentRender';
-import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import userEvent from '@testing-library/user-event';
-import { $api } from 'shared/api/api';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { componentRender } from '@/shared/lib/test/componentRender/componentRender';
+import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { $api } from '@/shared/api/api';
 import { Profile } from '../../model/types/profile';
 import { profileReducer } from '../../model/slice/profileSlice';
 import { EditableProfileCard } from './EditableProfileCard';

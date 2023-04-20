@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Country } from 'entities/Country';
-import { Currency } from 'entities/Currency';
-import { TestAsyncThunk } from 'shared/lib/test/TestAsyncThunk/TestAsyncThunk';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk/TestAsyncThunk';
 import { fetchProfileData } from './fetchProfileData';
 
 describe('fetchProfileData.test', () => {

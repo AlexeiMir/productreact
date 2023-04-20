@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { articleMock } from 'entities/Article/mocks/data';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { articleMock } from '@/entities/Article/mocks/data';
 import ArticlesPage from './ArticlesPage';
 
 export default {

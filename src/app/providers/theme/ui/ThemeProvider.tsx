@@ -4,7 +4,7 @@ import {
     useMemo,
     useState,
 } from 'react';
-import { Theme } from 'shared/types/theme/theme';
+import { Theme } from '@/shared/types/theme/theme';
 import {
     LOCAL_STORAGE_THEME_KEY,
     ThemeContext,

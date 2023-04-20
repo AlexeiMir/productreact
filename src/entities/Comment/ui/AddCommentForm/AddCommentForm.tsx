@@ -1,13 +1,12 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-
 import { useTranslation } from 'react-i18next';
 
 import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { Button, Input } from 'shared/ui';
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { addCommentFormReducer } from 'features/ArticleDetailsComment';
-import { HStack } from 'shared/ui/Stack';
+import { Button, Input } from '@/shared/ui';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { addCommentFormReducer } from '@/features/ArticleDetailsComment';
+import { HStack } from '@/shared/ui/Stack';
 import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {

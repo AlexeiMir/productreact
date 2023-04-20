@@ -1,4 +1,3 @@
-import { rtkApi } from 'shared/api/rtkApi';
 import {
     CombinedState,
     EnhancedStore,
@@ -6,16 +5,17 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { AddCommentFormSchema, ArticleDetailsSchema } from 'entities/Article';
-import { CounterSchema } from 'entities/Counter';
-import { UserSchema } from 'entities/User';
-import { LoginSchema } from 'features/AuthByUsername';
-import { ProfileSchema } from 'features/EditableProfileCard';
-import { UISchema } from 'features/UI';
+import { rtkApi } from '@/shared/api/rtkApi';
+import { AddCommentFormSchema, ArticleDetailsSchema } from '@/entities/Article';
+import { CounterSchema } from '@/entities/Counter';
+import { UserSchema } from '@/entities/User';
+import { LoginSchema } from '@/features/AuthByUsername';
+import { ProfileSchema } from '@/features/EditableProfileCard';
+import { UISchema } from '@/features/UI';
 import {
     ArticlesDetailsPageSchema,
-} from 'pages/ArticleDetailsPage';
-import { ArticlesPageSchema } from 'pages/ArticlesPage';
+} from '@/pages/ArticleDetailsPage';
+import { ArticlesPageSchema } from '@/pages/ArticlesPage';
 
 export interface StateSchema {
   counter: CounterSchema,
