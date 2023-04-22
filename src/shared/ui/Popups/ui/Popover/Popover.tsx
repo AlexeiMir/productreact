@@ -31,7 +31,12 @@ const Popover = memo((props: PopoverProps) => {
     const { t } = useTranslation();
     return (
         <HPopover className={classNames(cls.Popover, {}, [className, popupCls.popup])}>
-            <HPopover.Button className={popupCls.trigger}>{ trigger}</HPopover.Button>
+            <HPopover.Button
+                as="div"
+                className={popupCls.trigger}
+            >
+                {trigger}
+            </HPopover.Button>
 
             <HPopover.Panel className={classNames(cls.panel, {}, menuClasses)}>
                 {children}

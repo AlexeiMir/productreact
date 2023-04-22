@@ -1,3 +1,5 @@
+export { StarRating } from './StarRating/StarRating';
+
 export { Select } from './Select/Select';
 export { AppLink } from './AppLink/AppLink';
 export { Button } from './Button/Button';

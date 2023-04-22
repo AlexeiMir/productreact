@@ -23,7 +23,6 @@ const NotificationButton = memo((props: NotificationButtonProps) => {
     const { t } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const isMobile = detectDevice();
-    console.log('isOpen', isOpen);
     const onOpenDrawer = useCallback(() => {
         setIsOpen(true);
     }, []);
