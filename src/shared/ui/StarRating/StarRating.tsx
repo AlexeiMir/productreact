@@ -23,7 +23,7 @@ const StarRating = memo((props: StarRatingProps) => {
         selectedStars = 0,
         onSelect,
     } = props;
-    const [currentStarsCount, setCurrentStarsCount] = useState(0);
+    const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
     console.log('currentStarsCount', currentStarsCount);
     console.log('selectedStars', selectedStars);

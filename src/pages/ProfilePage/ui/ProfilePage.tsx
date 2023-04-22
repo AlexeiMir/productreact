@@ -6,6 +6,7 @@ import { Text } from '@/shared/ui/Text/Text';
 import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { EditableProfileCard } from '@/features/EditableProfileCard/ui/EditableProfileCard/EditableProfileCard';
+import { ProfileRating } from '@/features/profileRating';
 
 interface ProfilePageProps {
 className?: string
@@ -23,6 +24,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
         <Page className={classNames('', {}, [className])}>
             <VStack gap="16" max>
                 <EditableProfileCard id={id} />
+                <ProfileRating profileId={id} />
             </VStack>
 
         </Page>

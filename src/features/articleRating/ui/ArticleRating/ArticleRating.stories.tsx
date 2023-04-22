@@ -1,22 +1,27 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/types/theme/theme';
-import { StarRating } from './StarRating';
+import ArticleRating from './ArticleRating';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
-    title: 'shared/StarRating',
-    component: StarRating,
+    title: 'features/ArticleRating',
+    component: ArticleRating,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof StarRating>;
+    decorators: [StoreDecorator({})],
+} as ComponentMeta<typeof ArticleRating>;
 
-const Template: ComponentStory<typeof StarRating> = (arg) => <StarRating {...arg} />;
+const Template: ComponentStory<typeof ArticleRating> = (arg) => <ArticleRating {...arg} />;
 
 export const Normal = Template.bind({});
-Normal.args = {};
+Normal.args = {
+    articleId: '1',
+};
 
 export const Dark = Template.bind({});
-Dark.args = {};
+Dark.args = {
+    articleId: '1',
+};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
