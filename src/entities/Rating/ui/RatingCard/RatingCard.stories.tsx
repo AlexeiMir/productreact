@@ -4,7 +4,7 @@ import { Theme } from '@/shared/types/theme/theme';
 import { RatingCard } from './RatingCard';
 
 export default {
-    title: 'entities/RatingCard',
+    title: 'entities/Rating/RatingCard',
     component: RatingCard,
     argTypes: {
         backgroundColor: { control: 'color' },

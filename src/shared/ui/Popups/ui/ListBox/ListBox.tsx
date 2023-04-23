@@ -6,11 +6,11 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { DropdownDirection } from '@/shared/types/ui/ui';
-import { HStack } from '@/shared/ui/Stack';
-import { Button } from '@/shared/ui/Button/Button';
 import cls from './ListBox.module.scss';
 import { mapDirectionClass } from '../../styles/consts';
 import popupCls from '../../styles/popup.module.scss';
+import { HStack } from '../../../Stack';
+import { Button } from '../../../Button/Button';
 
 export interface ListBoxItem<T> {
   value: T;

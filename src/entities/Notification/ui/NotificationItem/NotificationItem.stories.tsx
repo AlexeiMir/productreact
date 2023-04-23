@@ -4,7 +4,7 @@ import { Theme } from '@/shared/types/theme/theme';
 import { NotificationItem } from './NotificationItem';
 
 export default {
-    title: 'entities/NotificationItem',
+    title: 'entities/Notification/NotificationItem',
     component: NotificationItem,
     argTypes: {
         backgroundColor: { control: 'color' },

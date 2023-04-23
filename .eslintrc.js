@@ -72,7 +72,7 @@ module.exports = {
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'arrow-body-style': 'off',
-        'feature-sliced-design-checker/path-checker': 'error',
+        'feature-sliced-design-checker/path-checker': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,
