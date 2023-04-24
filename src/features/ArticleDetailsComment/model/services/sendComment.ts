@@ -3,7 +3,7 @@ import { getUserAuthData } from '@/entities/User';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { getArticleDetailsData } from '@/entities/Article';
 import { Comment } from '@/entities/Comment';
-import { articleDetailsCommentsActions } from '@/pages/ArticleDetailsPage';
+import { articleDetailsCommentsActions } from '../slice/articleDetailsCommentsSlice';
 
 // First, create the thunk
 export const sendComment = createAsyncThunk<Comment, string, ThunkConfig<string>>(

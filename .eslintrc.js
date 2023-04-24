@@ -73,6 +73,7 @@ module.exports = {
         'no-undef': 'off',
         'arrow-body-style': 'off',
         'feature-sliced-design-checker/path-checker': ['error', { alias: '@' }],
+        'feature-sliced-design-checker/public-api-imports': ['error', { alias: '@' }],
     },
     globals: {
         __IS_DEV__: true,

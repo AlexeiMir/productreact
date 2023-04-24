@@ -10,13 +10,13 @@ import {
     ArticleView,
     ArticleSortSelector,
     ArticleTypeTabs,
+    ArticleType,
 } from '@/entities/Article';
 import { Input } from '@/shared/ui';
 import { Card } from '@/shared/ui/Card/Card';
 import { SortOrder } from '@/shared/types/sort/sortOrder';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem, Tabs } from '@/shared/ui/Tabs/Tabs';
-import { ArticleType } from '@/entities/Article/model/types/article';
+import { TabItem } from '@/shared/ui/Tabs/Tabs';
 import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
 import { articlesPageActions } from '../../model/slices/articlesPageSlice';
 import cls from './ArticlesPageFilters.module.scss';
