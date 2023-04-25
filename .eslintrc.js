@@ -73,7 +73,10 @@ module.exports = {
         'no-undef': 'off',
         'arrow-body-style': 'off',
         'feature-sliced-design-checker/path-checker': ['error', { alias: '@' }],
-        'feature-sliced-design-checker/public-api-imports': ['error', { alias: '@' }],
+        'feature-sliced-design-checker/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.ts', '**/*.stories.ts', '**/StoreDecorator.tsx'],
+        }],
     },
     globals: {
         __IS_DEV__: true,
