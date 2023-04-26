@@ -1,7 +1,6 @@
 import { ReducersMapObject } from '@reduxjs/toolkit';
 import { Story } from '@storybook/react';
-import { StoreProvider } from '@/app/providers/StoreProvider';
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { StoreProvider, StateSchema } from '@/app/providers/StoreProvider';
 import { addCommentFormReducer } from '@/features/ArticleDetailsComment/testing';
 import { loginReducer } from '@/features/AuthByUsername/testing';
 import { profileReducer } from '@/features/EditableProfileCard/testing';

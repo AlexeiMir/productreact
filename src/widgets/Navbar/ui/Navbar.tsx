@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 import { AppLinkTheme } from '@/shared/ui/AppLink/AppLink';
 import { getUserAuthData } from '@/entities/User';
 import { LoginModal } from '@/features/AuthByUsername';
-import { RoutePath } from '@/shared/config/routes';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink, Avatar, Button } from '@/shared/ui';
 import { ButtonTheme } from '@/shared/ui/Button/Button';
@@ -13,6 +12,7 @@ import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
 import cls from './Navbar.module.scss';
+import { RoutePath } from '@/shared/types/router/router';
 
 interface NavbarProps {
  className?: string;

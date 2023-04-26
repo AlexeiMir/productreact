@@ -12,7 +12,7 @@ import { useInfiniteScroll } from '@/shared/lib/hooks/useInfiniteScroll/useInfin
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getUIScrollByPath, uiActions } from '@/features/UI';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
-import { StateSchema } from '@/app/providers/StoreProvider/config/StateSchema';
+import { StateSchema } from '@/app/providers/StoreProvider';
 import { useThrottle } from '@/shared/lib/hooks/useThrottle/useThrottle';
 import cls from './Page.module.scss';
 

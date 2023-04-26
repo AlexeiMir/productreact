@@ -3,11 +3,11 @@ import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import { Text, TextAlign, TextTheme } from '@/shared/ui/Text/Text';
 import { Avatar, Input, Loader } from '@/shared/ui';
-import { Profile } from '@/features/EditableProfileCard';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { Country, CountrySelect } from '@/entities/Country';
 import { HStack, VStack } from '@/shared/ui/Stack';
 import cls from './ProfileCard.module.scss';
+import { Profile } from '../../model/types/profile';
 
 interface ProfileCardProps {
   className?: string,

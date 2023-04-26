@@ -77,6 +77,13 @@ module.exports = {
             alias: '@',
             testFilesPatterns: ['**/*.test.ts', '**/*.stories.ts', '**/StoreDecorator.tsx'],
         }],
+        'feature-sliced-design-checker/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

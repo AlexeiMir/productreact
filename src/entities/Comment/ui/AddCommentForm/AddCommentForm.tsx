@@ -4,8 +4,6 @@ import { memo } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 import { Button, Input } from '@/shared/ui';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { addCommentFormReducer } from '@/features/ArticleDetailsComment';
 import { HStack } from '@/shared/ui/Stack';
 import cls from './AddCommentForm.module.scss';
 
@@ -17,10 +15,6 @@ export interface AddCommentFormProps {
   onClick: () => void;
 }
 
-const reducers: ReducersList = {
-    addCommentForm: addCommentFormReducer,
-};
-
 const AddCommentForm = memo((props: AddCommentFormProps) => {
     const {
         className,
@@ -31,17 +25,17 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
     } = props;
     const { t } = useTranslation();
     return (
-        <DynamicModuleLoader reducers={reducers}>
-            <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
-                <Input
-                    value={text}
-                    className={cls.input}
-                    onChange={onChange}
-                    placeholder={t('Введите текст комментария')}
-                />
-                <Button onClick={onClick}>{t('Отправить')}</Button>
-            </HStack>
-        </DynamicModuleLoader>
+
+        <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
+            <Input
+                value={text}
+                className={cls.input}
+                onChange={onChange}
+                placeholder={t('Введите текст комментария')}
+            />
+            <Button onClick={onClick}>{t('Отправить')}</Button>
+        </HStack>
+
     );
 });
 

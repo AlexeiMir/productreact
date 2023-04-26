@@ -9,11 +9,11 @@ import { Icon } from '@/shared/ui/Icon/Icon';
 import { Card } from '@/shared/ui/Card/Card';
 import { AppLink, Avatar, Button } from '@/shared/ui';
 import { ButtonTheme } from '@/shared/ui/Button/Button';
-import { RoutePath } from '@/shared/config/routes';
 import { Article, ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { ArticleView } from '../../model/consts/articleConsts';
+import { RoutePath } from '@/shared/types/router/router';
 
 interface ArticleListItemProps {
   className?: string,

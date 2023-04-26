@@ -11,16 +11,21 @@ import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from '@/shared/ui';
 import { getAddCommentFormError, getAddCommentFormText } from '../model/selectors/addCommentFormSelectors';
-import { addCommentFormActions } from '../model/slice/addCommentFormSlice';
+import { addCommentFormActions, addCommentFormReducer } from '../model/slice/addCommentFormSlice';
 import { sendComment } from '../model/services/sendComment';
 import { getArticleComments } from '../model/slice/articleDetailsCommentsSlice';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId';
 import { getArticleCommentsError, getArticleCommentsIsLoading } from '../model/selectors/comments/comments';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 interface ArticleDetailsCommentProps {
   className?: string,
   id: string,
 }
+
+const reducers: ReducersList = {
+    addCommentForm: addCommentFormReducer,
+};
 
 const ArticleDetailsComment = memo((props: ArticleDetailsCommentProps) => {
     const {
@@ -56,12 +61,14 @@ const ArticleDetailsComment = memo((props: ArticleDetailsCommentProps) => {
         <VStack gap="8" max className={classNames('', {}, [className])}>
             <Text size={TextSize.L} title={t('Комментарии')} />
             <Suspense fallback={<Loader />}>
-                <AddCommentForm
-                    text={text}
-                    error={error}
-                    onClick={onSendComment}
-                    onChange={onCommentTextChange}
-                />
+                <DynamicModuleLoader reducers={reducers}>
+                    <AddCommentForm
+                        text={text}
+                        error={error}
+                        onClick={onSendComment}
+                        onChange={onCommentTextChange}
+                    />
+                </DynamicModuleLoader>
             </Suspense>
             <CommentList
                 isLoading={commentsIsLoading}

@@ -1,7 +1,6 @@
 import {
     MutableRefObject, useCallback, useEffect, useRef, useState,
 } from 'react';
-import { useTheme } from '@/app/providers/theme';
 
 interface UseModalProps {
   isOpen?: boolean,

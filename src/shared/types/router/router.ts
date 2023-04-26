@@ -1,6 +1,3 @@
-import { RouteProps } from 'react-router-dom';
-import { UserRole } from '@/entities/User';
-
 export enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
@@ -26,8 +23,3 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.ARTICLE_EDIT]: '/articles/:id/edit', // +id
     [AppRoutes.NOT_FOUND]: '*',
 };
-
-export type AppRouteProps = RouteProps & {
-  authOnly?: boolean,
-  roles?: UserRole[]
-}

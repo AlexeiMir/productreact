@@ -8,9 +8,9 @@ import {
 } from '@/entities/User';
 import { Dropdown } from '@/shared/ui/Popups';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { RoutePath } from '@/shared/config/routes';
 import { Avatar } from '@/shared/ui';
 import cls from './AvatarDropdown.module.scss';
+import { RoutePath } from '@/shared/types/router/router';
 
 interface AvatarDropdownProps {
 className?: string
