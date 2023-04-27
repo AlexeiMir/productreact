@@ -1,8 +1,9 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
+
+import { Page } from './Page';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Page } from './Page';
 
 export default {
     title: 'widgets/Page',

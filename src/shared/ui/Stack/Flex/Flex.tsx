@@ -5,9 +5,10 @@ import {
     ElementType,
     ComponentProps,
 } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 import cls from './Flex.module.scss';
+
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 type FlexJustify = 'start' | 'center' | 'end' | 'between';
 type FlexAlign = 'start' | 'center' | 'end';

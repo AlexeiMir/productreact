@@ -5,7 +5,7 @@ import {
     ReducersMapObject,
 } from '@reduxjs/toolkit';
 import { AxiosInstance } from 'axios';
-import { rtkApi } from '@/shared/api/rtkApi';
+
 import { AddCommentFormSchema, ArticleDetailsSchema } from '@/entities/Article';
 import { CounterSchema } from '@/entities/Counter';
 import { UserSchema } from '@/entities/User';
@@ -16,6 +16,7 @@ import {
     ArticlesDetailsPageSchema,
 } from '@/pages/ArticleDetailsPage';
 import { ArticlesPageSchema } from '@/pages/ArticlesPage';
+import { rtkApi } from '@/shared/api/rtkApi';
 
 export interface StateSchema {
   counter: CounterSchema,

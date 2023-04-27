@@ -1,25 +1,7 @@
-import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
 
-import { ArticleViewSelector } from '@/features/ArticleViewSelector';
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import {
-    ArticleSortField,
-    ArticleView,
-    ArticleSortSelector,
-    ArticleTypeTabs,
-    ArticleType,
-} from '@/entities/Article';
-import { Input } from '@/shared/ui';
-import { Card } from '@/shared/ui/Card/Card';
-import { SortOrder } from '@/shared/types/sort/sortOrder';
-import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
-import { TabItem } from '@/shared/ui/Tabs/Tabs';
-import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
-import { articlesPageActions } from '../../model/slices/articlesPageSlice';
-import cls from './ArticlesPageFilters.module.scss';
 import {
     getArticlesPageOrder,
     getArticlesPageSearch,
@@ -27,6 +9,26 @@ import {
     getArticlesPageType,
     getArticlesPageView,
 } from '../../model/selectors/articlesPageSelectors';
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList';
+import { articlesPageActions } from '../../model/slices/articlesPageSlice';
+
+import cls from './ArticlesPageFilters.module.scss';
+
+import {
+    ArticleSortField,
+    ArticleView,
+    ArticleSortSelector,
+    ArticleTypeTabs,
+    ArticleType,
+} from '@/entities/Article';
+import { ArticleViewSelector } from '@/features/ArticleViewSelector';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
+import { SortOrder } from '@/shared/types/sort/sortOrder';
+import { Input } from '@/shared/ui';
+import { Card } from '@/shared/ui/Card';
+import { TabItem } from '@/shared/ui/Tabs';
 
 interface ArticlesPageFiltersProps {
 className?: string

@@ -1,8 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import ProfileRating from './ProfileRating';
+
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
-import ProfileRating from './ProfileRating';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 export default {
     title: 'features/ProfileRating',

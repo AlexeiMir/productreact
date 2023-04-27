@@ -1,10 +1,11 @@
-import { useTranslation } from 'react-i18next';
 import { Suspense } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import { useTranslation } from 'react-i18next';
 
-import { Modal } from '@/shared/ui/Modal/Modal';
-import { Loader } from '@/shared/ui';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
+
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Loader } from '@/shared/ui';
+import { Modal } from '@/shared/ui/Modal';
 
 interface LoginModalProps {
   className?: string,

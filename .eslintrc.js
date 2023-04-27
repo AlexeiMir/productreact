@@ -24,10 +24,12 @@ module.exports = {
         'i18next',
         'react-hooks',
         'feature-sliced-design-checker',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
+        'unused-imports/no-unused-imports': 'error',
         indent: [2, 4],
         'react/react-in-jsx-scope': 'off',
         'react/jsx-filename-extension': [2, {
@@ -82,6 +84,23 @@ module.exports = {
             {
                 alias: '@',
                 ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
+        'import/order': [
+            'error',
+            {
+                pathGroups: [
+                    {
+                        pattern: '@/**',
+                        group: 'internal',
+                        position: 'after',
+                    },
+                ],
+                'newlines-between': 'always',
+                alphabetize: {
+                    order: 'asc',
+                    caseInsensitive: false,
+                },
             },
         ],
     },

@@ -1,11 +1,11 @@
-import { useTranslation } from 'react-i18next';
-
 import { memo, useState } from 'react';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+
+import { Icon } from '../Icon/Icon';
 
 import cls from './StarRating.module.scss';
+
 import StarIcon from '@/shared/asserts/icons/star.svg';
-import { Icon } from '../Icon/Icon';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface StarRatingProps {
   className?: string,

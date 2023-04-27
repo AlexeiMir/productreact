@@ -1,11 +1,11 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './AddCommentForm.module.scss';
 
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button, Input } from '@/shared/ui';
 import { HStack } from '@/shared/ui/Stack';
-import cls from './AddCommentForm.module.scss';
 
 export interface AddCommentFormProps {
   className?: string,

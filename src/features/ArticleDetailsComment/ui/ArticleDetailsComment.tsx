@@ -1,22 +1,22 @@
-import { useTranslation } from 'react-i18next';
-
 import { memo, Suspense, useCallback } from 'react';
-
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
+
+import { getAddCommentFormError, getAddCommentFormText } from '../model/selectors/addCommentFormSelectors';
+import { getArticleCommentsError, getArticleCommentsIsLoading } from '../model/selectors/comments/comments';
+import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId';
+import { sendComment } from '../model/services/sendComment';
+import { addCommentFormActions, addCommentFormReducer } from '../model/slice/addCommentFormSlice';
+import { getArticleComments } from '../model/slice/articleDetailsCommentsSlice';
+
 import { AddCommentForm, CommentList } from '@/entities/Comment';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { VStack } from '@/shared/ui/Stack';
-import { Text, TextSize } from '@/shared/ui/Text/Text';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from '@/shared/ui';
-import { getAddCommentFormError, getAddCommentFormText } from '../model/selectors/addCommentFormSelectors';
-import { addCommentFormActions, addCommentFormReducer } from '../model/slice/addCommentFormSlice';
-import { sendComment } from '../model/services/sendComment';
-import { getArticleComments } from '../model/slice/articleDetailsCommentsSlice';
-import { fetchCommentsByArticleId } from '../model/services/fetchCommentsByArticleId';
-import { getArticleCommentsError, getArticleCommentsIsLoading } from '../model/selectors/comments/comments';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { VStack } from '@/shared/ui/Stack';
+import { Text, TextSize } from '@/shared/ui/Text';
 
 interface ArticleDetailsCommentProps {
   className?: string,

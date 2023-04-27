@@ -1,15 +1,15 @@
+import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleViewSelector.module.scss';
 
 import { ArticleView } from '@/entities/Article';
-import TiledIcon from '@/shared/asserts/icons/tiled-24-24.svg';
 import ListIcon from '@/shared/asserts/icons/list-24-24.svg';
+import TiledIcon from '@/shared/asserts/icons/tiled-24-24.svg';
+import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui';
-import { Icon } from '@/shared/ui/Icon/Icon';
-import { ButtonTheme } from '@/shared/ui/Button/Button';
-import cls from './ArticleViewSelector.module.scss';
+import { ButtonTheme } from '@/shared/ui/Button';
+import { Icon } from '@/shared/ui/Icon';
 
 interface ArticleViewSelectorProps {
   className?: string,

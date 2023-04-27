@@ -1,9 +1,11 @@
 import { memo, useCallback } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+
+import { Button, ButtonTheme } from '../Button/Button';
+
+import cls from './Code.module.scss';
 
 import CopyIcon from '@/shared/asserts/icons/copy-20-20.svg';
-import cls from './Code.module.scss';
-import { Button, ButtonTheme } from '../Button/Button';
+import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface CodeProps {
 className?: string,

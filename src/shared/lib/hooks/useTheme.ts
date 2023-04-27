@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
-import { Theme } from '../../const/theme';
+
 import { LOCAL_STORAGE_THEME_KEY } from '../../const/localstorage';
+import { Theme } from '../../const/theme';
 import { ThemeContext } from '../context/ThemeContext';
 
 export interface UseThemeResult {

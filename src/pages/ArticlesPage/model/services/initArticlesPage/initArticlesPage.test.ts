@@ -1,9 +1,10 @@
-import axios from 'axios';
-import { ArticleSortField } from '@/entities/Article';
-import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk/TestAsyncThunk';
 import { articlesPageActions } from '../../slices/articlesPageSlice';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
+
 import { initArticlesPage } from './initArticlesPage';
+
+import { ArticleSortField } from '@/entities/Article';
+import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk/TestAsyncThunk';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 

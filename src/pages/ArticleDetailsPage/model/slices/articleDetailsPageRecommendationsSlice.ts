@@ -1,12 +1,13 @@
 import {
     createEntityAdapter,
     createSlice,
-    PayloadAction,
 } from '@reduxjs/toolkit';
+
+import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { ArticleDetailsPageRecommendationsSchema } from '../types/ArticleDetailsPageRecommendationsSchema';
+
 import { StateSchema } from '@/app/providers/StoreProvider';
 import { Article } from '@/entities/Article';
-import { ArticleDetailsPageRecommendationsSchema } from '../types/ArticleDetailsPageRecommendationsSchema';
-import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
 
 const recommendationsAdapter = createEntityAdapter<Article>({
     // Assume IDs are stored in a field other than `book.id`

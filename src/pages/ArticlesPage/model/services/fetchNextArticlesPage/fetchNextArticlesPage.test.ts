@@ -1,7 +1,8 @@
-import axios from 'axios';
-import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk/TestAsyncThunk';
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList';
+
 import { fetchNextArticlesPage } from './fetchNextArticlesPage';
+
+import { TestAsyncThunk } from '@/shared/lib/test/TestAsyncThunk/TestAsyncThunk';
 
 jest.mock('../fetchArticlesList/fetchArticlesList');
 

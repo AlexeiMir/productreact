@@ -1,7 +1,9 @@
+import { ValidateProfileError } from '../../consts/validateConsts';
+
+import { validateProfileData } from './validateProfileData';
+
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import { ValidateProfileError } from '../../consts/validateConsts';
-import { validateProfileData } from './validateProfileData';
 
 describe('validateProfileData.test', () => {
     test('success login', () => {

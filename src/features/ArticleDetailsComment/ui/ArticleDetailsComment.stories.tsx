@@ -1,8 +1,9 @@
-import React, { Suspense } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React, { Suspense } from 'react';
+
+import { ArticleDetailsComment } from './ArticleDetailsComment';
 
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleDetailsComment } from './ArticleDetailsComment';
 
 export default {
     title: 'features/ArticleDetailsComment',
