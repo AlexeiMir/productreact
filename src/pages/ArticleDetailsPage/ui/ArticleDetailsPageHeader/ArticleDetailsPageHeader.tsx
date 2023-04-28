@@ -9,7 +9,7 @@ import cls from './ArticleDetailsPageHeader.module.scss';
 
 import { getArticleDetailsData } from '@/entities/Article';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { RoutePath } from '@/shared/types/router/router';
+import { getRouteArticleEdit, getRouteArticles } from '@/shared/types/router/router';
 import { Button } from '@/shared/ui';
 import { ButtonTheme } from '@/shared/ui/Button';
 
@@ -26,11 +26,13 @@ const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderProps) => 
     const article = useSelector(getArticleDetailsData);
 
     const onBackToList = useCallback(() => {
-        navigate(RoutePath.articles);
+        navigate(getRouteArticles());
     }, [navigate]);
 
     const onEditArticle = useCallback(() => {
-        navigate(`${RoutePath.article_detailes}${article?.id}/edit`);
+        if (article?.id) {
+            navigate(getRouteArticleEdit(article?.id));
+        }
     }, [article?.id, navigate]);
 
     return (

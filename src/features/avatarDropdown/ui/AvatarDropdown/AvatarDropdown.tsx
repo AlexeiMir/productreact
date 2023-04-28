@@ -9,7 +9,7 @@ import {
 } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { RoutePath } from '@/shared/types/router/router';
+import { getRouteAdmin, getRouteProfile } from '@/shared/types/router/router';
 import { Avatar } from '@/shared/ui';
 import { Dropdown } from '@/shared/ui/Popups';
 
@@ -41,11 +41,11 @@ const AvatarDropdown = memo((props: AvatarDropdownProps) => {
             items={[
                 ...(isAdminPanelAvailable ? [{
                     content: t('Админка'),
-                    href: RoutePath.admin_panel,
+                    href: getRouteAdmin(),
                 }] : []),
                 {
                     content: t('Профиль'),
-                    href: RoutePath.profile + authData.id,
+                    href: getRouteProfile(authData.id),
                 },
                 {
                     content: t('Выйти'),

@@ -9,7 +9,7 @@ import cls from './ArticleListItem.module.scss';
 
 import EyeIcon from '@/shared/asserts/icons/eye-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { RoutePath } from '@/shared/types/router/router';
+import { getRouteArticleDetails } from '@/shared/types/router/router';
 import { AppLink, Avatar, Button } from '@/shared/ui';
 import { ButtonTheme } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
@@ -60,7 +60,7 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <div className={cls.footer}>
                         <AppLink
                             target={target}
-                            to={RoutePath.article_detailes + article.id}
+                            to={getRouteArticleDetails(article.id)}
                         >
                             <Button theme={ButtonTheme.OUTLINE}>
                                 {t('Читать далее ...')}
@@ -76,7 +76,7 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             target={target}
-            to={RoutePath.article_detailes + article.id}
+            to={getRouteArticleDetails(article.id)}
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card>
