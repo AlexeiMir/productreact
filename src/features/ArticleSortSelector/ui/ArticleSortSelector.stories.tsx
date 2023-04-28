@@ -4,7 +4,7 @@ import React from 'react';
 import { ArticleSortSelector } from './ArticleSortSelector';
 
 export default {
-    title: 'pages/Article/ArticleSortSelector',
+    title: 'features/ArticleSortSelector',
     component: ArticleSortSelector,
     argTypes: {
         backgroundColor: { control: 'color' },

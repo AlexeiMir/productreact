@@ -17,10 +17,10 @@ import cls from './ArticlesPageFilters.module.scss';
 import {
     ArticleSortField,
     ArticleView,
-    ArticleSortSelector,
-    ArticleTypeTabs,
     ArticleType,
 } from '@/entities/Article';
+import { ArticleSortSelector } from '@/features/ArticleSortSelector';
+import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
 import { ArticleViewSelector } from '@/features/ArticleViewSelector';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';

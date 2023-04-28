@@ -4,7 +4,7 @@ import React from 'react';
 import { ArticleTypeTabs } from './ArticleTypeTabs';
 
 export default {
-    title: 'entities/ArticleTypeTabs',
+    title: 'features/ArticleTypeTabs',
     component: ArticleTypeTabs,
     argTypes: {
         backgroundColor: { control: 'color' },

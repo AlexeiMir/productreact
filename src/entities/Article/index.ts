@@ -1,10 +1,6 @@
 export { articleMock } from './mocks/data';
 export { ArticleSortField, ArticleView } from './model/consts/articleConsts';
 
-export { ArticleTypeTabs } from './ui/ArticleTypeTabs/ArticleTypeTabs';
-
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector';
-
 export type { ArticleType } from './model/types/article';
 export { ArticleList } from './ui/ArticleList/ArticleList';
 
