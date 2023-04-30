@@ -11,9 +11,11 @@ import EyeIcon from '@/shared/asserts/icons/eye-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getRouteArticleDetails } from '@/shared/types/router/router';
 import { AppLink, Avatar, Button } from '@/shared/ui';
+import { AppImage } from '@/shared/ui/AppImage';
 import { ButtonTheme } from '@/shared/ui/Button';
 import { Card } from '@/shared/ui/Card';
 import { Icon } from '@/shared/ui/Icon';
+import { Skeleton } from '@/shared/ui/Skeleton';
 import { Text } from '@/shared/ui/Text';
 
 interface ArticleListItemProps {
@@ -39,7 +41,6 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
             <Icon Svg={EyeIcon} />
         </>
     );
-    const articleImg = <img src={article.img} alt={article.title} className={cls.img} />;
 
     if (view === ArticleView.LIST) {
         const textBlock = article.blocks.find((block) => block.type === 'TEXT') as ArticleTextBlock;
@@ -53,7 +54,12 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
                     </div>
                     <Text text={article.title} className={cls.title} />
                     {types}
-                    {articleImg}
+                    <AppImage
+                        src={article.img}
+                        fallback={<Skeleton width="100%" height={250} />}
+                        alt={article.title}
+                        className={cls.img}
+                    />
                     {textBlock && (
                         <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
@@ -81,7 +87,12 @@ const ArticleListItem = memo((props: ArticleListItemProps) => {
         >
             <Card>
                 <div className={cls.imageWrapper}>
-                    {articleImg}
+                    <AppImage
+                        src={article.img}
+                        fallback={<Skeleton width={200} height={200} />}
+                        alt={article.title}
+                        className={cls.img}
+                    />
                     <Text text={article.createdAt} className={cls.date} />
                 </div>
                 <div className={cls.infoWrapper}>

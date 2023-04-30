@@ -1,24 +1,19 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
 
-import AboutPage from './AboutPage';
+import { AppImage } from './AppImage';
 
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
 export default {
-    title: 'pages/AboutPage',
-    component: AboutPage,
+    title: 'shared/AppImage',
+    component: AppImage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({})],
-} as ComponentMeta<typeof AboutPage>;
+} as ComponentMeta<typeof AppImage>;
 
-const Template: ComponentStory<typeof AboutPage> = () => (
-    <AboutPage />
-);
+const Template: ComponentStory<typeof AppImage> = (arg) => <AppImage {...arg} />;
 
 export const Normal = Template.bind({});
 Normal.args = {};
