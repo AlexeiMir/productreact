@@ -5,7 +5,7 @@ import { ProfileCard } from './ProfileCard';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import avatar from '@/shared/asserts/tests/storybook.jpg';
+// import avatar from '@/shared/asserts/tests/storybook.jpg';
 
 export default {
     title: 'entities/ProfileCard',
@@ -16,6 +16,8 @@ export default {
 } as ComponentMeta<typeof ProfileCard>;
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
+
+const avatar = 'https://cs10.pikabu.ru/images/community/2064/1605883416236930302.png';
 
 export const Primary = Template.bind({});
 Primary.args = {
