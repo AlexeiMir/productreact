@@ -1,5 +1,4 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import withMock from 'storybook-addon-mock';
 
 import ArticleRating from './ArticleRating';
 
@@ -15,7 +14,7 @@ export default {
         user: {
             authData: { id: '1' },
         },
-    }), withMock],
+    })],
 } as ComponentMeta<typeof ArticleRating>;
 
 const Template: ComponentStory<typeof ArticleRating> = (arg) => <ArticleRating {...arg} />;
