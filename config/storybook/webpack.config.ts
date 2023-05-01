@@ -31,11 +31,29 @@ export default ({ config }: { config: webpack.Configuration }) => {
             }
             return rule;
         });
+        // eslint-disable-next-line no-param-reassign
+        // @ts-ignore
+        config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
+            if (/\.(png|jpe?g|gif|woff2|woff)$/i.test(rule.test as string)) {
+                return { ...rule, exclude: /\.(png|jpe?g|gif|woff2|woff)$/i };
+            }
+
+            return rule;
+        });
     }
 
     config.module?.rules?.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
+    });
+
+    config.module?.rules?.push({
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
     });
 
     config.module?.rules?.push(buildCssLoader(true));
