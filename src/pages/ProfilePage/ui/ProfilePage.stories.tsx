@@ -5,7 +5,6 @@ import ProfilePage from './ProfilePage';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import avatar from '@/shared/asserts/tests/storybook.jpg';
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
@@ -19,6 +18,8 @@ export default {
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
+
+const avatar = 'https://cs10.pikabu.ru/images/community/2064/1605883416236930302.png';
 
 export const Primary = Template.bind({});
 Primary.args = {
