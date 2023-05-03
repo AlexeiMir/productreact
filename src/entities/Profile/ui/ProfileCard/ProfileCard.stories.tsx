@@ -5,7 +5,7 @@ import { ProfileCard } from './ProfileCard';
 
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
-import avatar from '@/shared/asserts/tests/storybook.jpg';
+// import avatar from '@/shared/asserts/tests/storybook.jpg';
 
 export default {
     title: 'entities/ProfileCard',
@@ -17,7 +17,7 @@ export default {
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />;
 
-// const avatar = 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg';
+const avatar = 'https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg';
 
 export const Primary = Template.bind({});
 Primary.args = {
