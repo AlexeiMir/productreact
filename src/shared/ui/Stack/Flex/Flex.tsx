@@ -46,6 +46,7 @@ T extends TagsVariants = E extends TagsVariants? E : never>(props: FlexProps<T>)
         max,
         wrap,
         tag,
+        ...otherProps
     } = props;
 
     const Tag = tag || 'div';
@@ -69,6 +70,7 @@ T extends TagsVariants = E extends TagsVariants? E : never>(props: FlexProps<T>)
                 mods,
                 classes,
             )}
+            {...otherProps}
         >
             {children}
         </Tag>

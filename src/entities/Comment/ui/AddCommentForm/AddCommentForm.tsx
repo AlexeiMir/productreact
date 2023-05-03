@@ -26,14 +26,26 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
     const { t } = useTranslation();
     return (
 
-        <HStack justify="between" max className={classNames(cls.AddCommentForm, {}, [className])}>
+        <HStack
+            data-testid="AddCommentForm"
+            justify="between"
+            max
+            className={classNames(cls.AddCommentForm, {}, [className])}
+        >
             <Input
+                data-testid="AddCommentForm.Input"
                 value={text}
                 className={cls.input}
                 onChange={onChange}
                 placeholder={t('Введите текст комментария')}
             />
-            <Button onClick={onClick}>{t('Отправить')}</Button>
+            <Button
+                data-testid="AddCommentForm.Button"
+                onClick={onClick}
+            >
+                {t('Отправить')}
+
+            </Button>
         </HStack>
 
     );
