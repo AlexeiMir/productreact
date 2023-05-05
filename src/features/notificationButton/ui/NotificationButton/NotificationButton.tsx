@@ -14,7 +14,7 @@ import { Icon } from '@/shared/ui/Icon';
 import { Popover } from '@/shared/ui/Popups';
 
 interface NotificationButtonProps {
-  className?: string
+    className?: string;
 }
 
 const NotificationButton = memo((props: NotificationButtonProps) => {
@@ -42,26 +42,24 @@ const NotificationButton = memo((props: NotificationButtonProps) => {
 
     return (
         <div>
-            {isMobile
-                ? (
-                    <>
-                        {trigger}
-                        <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
-                            <NotificationList />
-                        </Drawer>
-                    </>
-
-                )
-                : (
-                    <Popover
-                        className={classNames(cls.NotificationButton, {}, [className])}
-                        direction="bottom left"
-                        trigger={trigger}
-                    >
-                        <NotificationList className={cls.notifications} />
-                    </Popover>
-                )}
-
+            {isMobile ? (
+                <>
+                    {trigger}
+                    <Drawer isOpen={isOpen} onClose={onCloseDrawer}>
+                        <NotificationList />
+                    </Drawer>
+                </>
+            ) : (
+                <Popover
+                    className={classNames(cls.NotificationButton, {}, [
+                        className,
+                    ])}
+                    direction="bottom left"
+                    trigger={trigger}
+                >
+                    <NotificationList className={cls.notifications} />
+                </Popover>
+            )}
         </div>
     );
 });

@@ -15,7 +15,9 @@ export default {
     decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof ProfileRating>;
 
-const Template: ComponentStory<typeof ProfileRating> = (arg) => <ProfileRating {...arg} />;
+const Template: ComponentStory<typeof ProfileRating> = (arg) => (
+    <ProfileRating {...arg} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {

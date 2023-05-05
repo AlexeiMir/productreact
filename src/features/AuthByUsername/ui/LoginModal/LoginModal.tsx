@@ -8,16 +8,12 @@ import { Loader } from '@/shared/ui';
 import { Modal } from '@/shared/ui/Modal';
 
 interface LoginModalProps {
-  className?: string,
-  isOpen: boolean,
-  onClose: () => void
+    className?: string;
+    isOpen: boolean;
+    onClose: () => void;
 }
 
-const LoginModal = ({
-    className,
-    isOpen,
-    onClose,
-}: LoginModalProps) => {
+const LoginModal = ({ className, isOpen, onClose }: LoginModalProps) => {
     const { t } = useTranslation();
     return (
         <Modal

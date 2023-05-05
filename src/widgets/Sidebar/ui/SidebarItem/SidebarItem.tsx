@@ -11,17 +11,12 @@ import { AppLink } from '@/shared/ui';
 import { AppLinkTheme } from '@/shared/ui/AppLink';
 
 interface SidebarItemProps {
-  collapsed: boolean,
-  item: SidebarItemType
+    collapsed: boolean;
+    item: SidebarItemType;
 }
 
 const SidebarItem = ({ collapsed, item }: SidebarItemProps) => {
-    const {
-        path,
-        text,
-        Icon,
-        authOnly,
-    } = item;
+    const { path, text, Icon, authOnly } = item;
     const { t } = useTranslation();
     const isAuth = useSelector(getUserAuthData);
 
@@ -35,9 +30,7 @@ const SidebarItem = ({ collapsed, item }: SidebarItemProps) => {
             to={path}
         >
             <Icon className={cls.icon} />
-            <span className={cls.link}>
-                {t(text)}
-            </span>
+            <span className={cls.link}>{t(text)}</span>
         </AppLink>
     );
 };

@@ -10,11 +10,14 @@ import { ArticleDetailsComment } from '@/features/ArticleDetailsComment';
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducersList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { Page } from '@/widgets/Page';
 
 interface ArticleDetailsPageProps {
-className?: string
+    className?: string;
 }
 
 const reducers: ReducersList = {
@@ -40,12 +43,9 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
                 <ArticleDetails id={id} />
                 <ArticleRating articleId={id} />
                 <ArticleRecommendationsList />
-                <ArticleDetailsComment
-                    id={id}
-                />
+                <ArticleDetailsComment id={id} />
             </Page>
         </DynamicModuleLoader>
-
     );
 };
 

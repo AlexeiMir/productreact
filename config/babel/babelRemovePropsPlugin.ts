@@ -4,7 +4,7 @@ export default function (): PluginItem {
     return {
         visitor: {
             Program(path, state) {
-            // Массив атрибутов, которые хотим выпилить
+                // Массив атрибутов, которые хотим выпилить
                 const forbidden = state.opts.props || [];
 
                 // traverse - проходим по всем нодам дерева

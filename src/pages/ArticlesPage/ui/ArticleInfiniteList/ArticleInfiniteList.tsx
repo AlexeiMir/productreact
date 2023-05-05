@@ -13,7 +13,7 @@ import { ArticleList } from '@/entities/Article';
 import { Text } from '@/shared/ui/Text';
 
 interface ArticleInfiniteListProps {
-className?: string
+    className?: string;
 }
 
 const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {

@@ -22,7 +22,9 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk(new URLSearchParams('sort=title&order=asc&search=typescript'));
+        await thunk.callThunk(
+            new URLSearchParams('sort=title&order=asc&search=typescript'),
+        );
 
         expect(thunk.dispatch).toBeCalledTimes(7);
         expect(thunk.dispatch).toHaveBeenCalledWith(
@@ -44,7 +46,9 @@ describe('initArticlesPage.test', () => {
             },
         });
 
-        await thunk.callThunk(new URLSearchParams('sort=title&order=asc&search=typescript'));
+        await thunk.callThunk(
+            new URLSearchParams('sort=title&order=asc&search=typescript'),
+        );
 
         expect(thunk.dispatch).toBeCalledTimes(2);
         expect(fetchArticlesList).not.toHaveBeenCalled();

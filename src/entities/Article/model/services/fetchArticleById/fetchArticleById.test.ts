@@ -15,9 +15,7 @@ const article: Article = {
         username: 'Alex',
     },
     createdAt: '26.02.2022',
-    type: [
-        'IT',
-    ],
+    type: ['IT'],
     blocks: [
         {
             id: '1',

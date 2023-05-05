@@ -3,11 +3,11 @@ import { SliceCaseReducers, CreateSliceOptions } from '@reduxjs/toolkit/dist';
 import { useMemo } from 'react';
 import { useDispatch } from 'react-redux';
 
-export function buildSlice<State,
-  CaseReducers extends SliceCaseReducers<State>,
-  Name extends string = string>(
-    options: CreateSliceOptions<State, CaseReducers, Name>,
-) {
+export function buildSlice<
+    State,
+    CaseReducers extends SliceCaseReducers<State>,
+    Name extends string = string,
+>(options: CreateSliceOptions<State, CaseReducers, Name>) {
     const slice = createSlice(options);
 
     const useActions = (): typeof slice.actions => {
@@ -15,7 +15,7 @@ export function buildSlice<State,
 
         // @ts-ignore
         return useMemo(
-        // @ts-ignore
+            // @ts-ignore
             () => bindActionCreators(slice.actions, dispatch),
             [dispatch],
         );

@@ -10,8 +10,8 @@ import { Card, CardTheme } from '@/shared/ui/Card';
 import { Text } from '@/shared/ui/Text';
 
 interface NotificationItemProps {
-  className?: string,
-  item: Notification
+    className?: string;
+    item: Notification;
 }
 
 const NotificationItem = memo((props: NotificationItemProps) => {
@@ -23,11 +23,7 @@ const NotificationItem = memo((props: NotificationItemProps) => {
             className={classNames(cls.NotificationItem, {}, [className])}
             theme={CardTheme.OUTLINED}
         >
-            <Text
-                title={item.title}
-                text={item.description}
-            />
-
+            <Text title={item.title} text={item.description} />
         </Card>
     );
 

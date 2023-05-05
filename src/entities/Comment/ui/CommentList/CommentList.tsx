@@ -9,17 +9,13 @@ import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
 interface CommentListProps {
-  className?: string,
-  comments?: Comment[],
-  isLoading?: boolean
+    className?: string;
+    comments?: Comment[];
+    isLoading?: boolean;
 }
 
 const CommentList = memo((props: CommentListProps) => {
-    const {
-        className,
-        comments,
-        isLoading,
-    } = props;
+    const { className, comments, isLoading } = props;
     const { t } = useTranslation();
 
     if (isLoading) {
@@ -31,15 +27,17 @@ const CommentList = memo((props: CommentListProps) => {
     }
     return (
         <VStack gap="16" max className={classNames('', {}, [className])}>
-            {comments?.length
-                ? comments.map((comment) => (
+            {comments?.length ? (
+                comments.map((comment) => (
                     <CommentCard
                         key={comment.id}
                         isLoading={isLoading}
                         comment={comment}
                     />
                 ))
-                : <Text text={t('Комментраии отсутствуют')} />}
+            ) : (
+                <Text text={t('Комментраии отсутствуют')} />
+            )}
         </VStack>
     );
 });

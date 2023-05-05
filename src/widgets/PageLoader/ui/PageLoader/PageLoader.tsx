@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Loader } from '@/shared/ui';
 
 interface PageLoaderProps {
-className?: string
+    className?: string;
 }
 
 const PageLoader = ({ className }: PageLoaderProps) => (

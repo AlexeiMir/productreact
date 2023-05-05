@@ -14,7 +14,9 @@ export default {
     },
 } as ComponentMeta<typeof NotificationList>;
 
-const Template: ComponentStory<typeof NotificationList> = (arg) => <NotificationList {...arg} />;
+const Template: ComponentStory<typeof NotificationList> = (arg) => (
+    <NotificationList {...arg} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

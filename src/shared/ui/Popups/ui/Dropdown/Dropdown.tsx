@@ -11,40 +11,45 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { DropdownDirection } from '@/shared/types/ui/ui';
 
 interface DropdownItem {
-  disabled?: boolean;
-  content?: ReactNode;
-  href?: string;
-  onClick?: () => void
+    disabled?: boolean;
+    content?: ReactNode;
+    href?: string;
+    onClick?: () => void;
 }
 
 interface DropdownProps {
-  className?: string,
-  direction: DropdownDirection,
-  trigger: ReactNode,
-  items: DropdownItem[]
+    className?: string;
+    direction: DropdownDirection;
+    trigger: ReactNode;
+    items: DropdownItem[];
 }
 
 const Dropdown = (props: DropdownProps) => {
-    const {
-        className,
-        direction = 'bottom right',
-        trigger,
-        items,
-    } = props;
+    const { className, direction = 'bottom right', trigger, items } = props;
 
     const menuClasses = [mapDirectionClass[direction]];
 
     return (
-        <Menu as="div" className={classNames(cls.Dropdown, {}, [className, popupCls.popup])}>
-            <Menu.Button className={cls.btn}>{ trigger}</Menu.Button>
+        <Menu
+            as="div"
+            className={classNames(cls.Dropdown, {}, [
+                className,
+                popupCls.popup,
+            ])}
+        >
+            <Menu.Button className={cls.btn}>{trigger}</Menu.Button>
             <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
                 {items.map((item, index) => {
-                    const content = ({ active }: {active: boolean}) => (
+                    const content = ({ active }: { active: boolean }) => (
                         <button
                             type="button"
                             disabled={item.disabled}
                             onClick={item.onClick}
-                            className={classNames(cls.item, { [popupCls.active]: active }, [className])}
+                            className={classNames(
+                                cls.item,
+                                { [popupCls.active]: active },
+                                [className],
+                            )}
                         >
                             {item.content}
                         </button>
@@ -64,7 +69,10 @@ const Dropdown = (props: DropdownProps) => {
                     }
 
                     return (
-                        <Menu.Item key={`dropdown-key-index${index}`} as={Fragment}>
+                        <Menu.Item
+                            key={`dropdown-key-index${index}`}
+                            as={Fragment}
+                        >
                             {content}
                         </Menu.Item>
                     );

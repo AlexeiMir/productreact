@@ -9,7 +9,7 @@ import { Text } from '@/shared/ui/Text';
 import { Page } from '@/widgets/Page';
 
 interface ProfilePageProps {
-className?: string
+    className?: string;
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
@@ -29,7 +29,6 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
                 <EditableProfileCard id={id} />
                 <ProfileRating profileId={id} />
             </VStack>
-
         </Page>
     );
 };

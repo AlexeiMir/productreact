@@ -9,7 +9,7 @@ import { Button } from '@/shared/ui';
 import { ButtonTheme } from '@/shared/ui/Button';
 
 interface ThemeSwitcherProps {
- className?: string;
+    className?: string;
 }
 
 export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {

@@ -15,27 +15,35 @@ type FlexAlign = 'start' | 'center' | 'end';
 type FlexDirection = 'row' | 'column';
 type FlexGap = '4' | '8' | '16' | '32';
 
-type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+type DivProps = DetailedHTMLProps<
+    HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+>;
 
-export interface FlexOwnProps<E extends ElementType = ElementType> extends DivProps {
-  className?: string;
-  children: ReactNode;
-  justify?: FlexJustify;
-  align?: FlexAlign;
-  direction?: FlexDirection;
-  gap?: FlexGap;
-  max?: boolean;
-  wrap?: boolean;
-  tag?: E;
+export interface FlexOwnProps<E extends ElementType = ElementType>
+    extends DivProps {
+    className?: string;
+    children: ReactNode;
+    justify?: FlexJustify;
+    align?: FlexAlign;
+    direction?: FlexDirection;
+    gap?: FlexGap;
+    max?: boolean;
+    wrap?: boolean;
+    tag?: E;
 }
 
-export type FlexProps<E extends ElementType> = FlexOwnProps<E> & Omit<ComponentProps<E>, keyof FlexOwnProps<E>>;
+export type FlexProps<E extends ElementType> = FlexOwnProps<E> &
+    Omit<ComponentProps<E>, keyof FlexOwnProps<E>>;
 
 export type TagsVariants = 'div' | 'section';
 
 const Flex = <
-E extends ElementType = TagsVariants,
-T extends TagsVariants = E extends TagsVariants? E : never>(props: FlexProps<T>) => {
+    E extends ElementType = TagsVariants,
+    T extends TagsVariants = E extends TagsVariants ? E : never,
+>(
+    props: FlexProps<T>,
+) => {
     const {
         className,
         children,
@@ -64,14 +72,7 @@ T extends TagsVariants = E extends TagsVariants? E : never>(props: FlexProps<T>)
         [cls.wrap]: wrap,
     };
     return (
-        <Tag
-            className={classNames(
-                cls.Flex,
-                mods,
-                classes,
-            )}
-            {...otherProps}
-        >
+        <Tag className={classNames(cls.Flex, mods, classes)} {...otherProps}>
             {children}
         </Tag>
     );

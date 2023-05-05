@@ -7,7 +7,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Page } from '@/widgets/Page';
 
 interface NotFoundPageProps {
-  className?: string
+    className?: string;
 }
 
 const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {

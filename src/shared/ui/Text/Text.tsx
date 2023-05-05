@@ -7,21 +7,21 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 // type ValueOf<T> = T[keyof T]
 
 export enum TextTheme {
-  PRIMARY = 'primary',
-  INVERTED = 'inverted',
-  ERROR = 'error'
+    PRIMARY = 'primary',
+    INVERTED = 'inverted',
+    ERROR = 'error',
 }
 
 export enum TextAlign {
-  RIGHT = 'right',
-  LEFT = 'left',
-  CENTER = 'center'
+    RIGHT = 'right',
+    LEFT = 'left',
+    CENTER = 'center',
 }
 
 export enum TextSize {
-  S = 'size_s',
-  M = 'size_m',
-  L = 'size_l',
+    S = 'size_s',
+    M = 'size_m',
+    L = 'size_l',
 }
 
 // export const textSize = {
@@ -35,13 +35,13 @@ export enum TextSize {
 type HeaderTagType = 'h1' | 'h2' | 'h3';
 
 interface TextProps {
-className?: string,
-title?: string,
-  text?: string,
-  theme?: TextTheme,
-  align?: TextAlign,
-  size?: TextSize,
-  'data-testid'?: string
+    className?: string;
+    title?: string;
+    text?: string;
+    theme?: TextTheme;
+    align?: TextAlign;
+    size?: TextSize;
+    'data-testid'?: string;
 }
 
 const Text = memo((props: TextProps) => {
@@ -63,11 +63,13 @@ const Text = memo((props: TextProps) => {
 
     const HeaderTag = mapSizeToHeaderTag[size];
     return (
-        <div className={classNames(
-            cls.Text,
-            {},
-            [className, cls[theme], cls[align], cls[size]],
-        )}
+        <div
+            className={classNames(cls.Text, {}, [
+                className,
+                cls[theme],
+                cls[align],
+                cls[size],
+            ])}
         >
             {title && (
                 <HeaderTag
@@ -78,10 +80,7 @@ const Text = memo((props: TextProps) => {
                 </HeaderTag>
             )}
             {text && (
-                <p
-                    data-testid={`${dataTestId}.Paragraph`}
-                    className={cls.text}
-                >
+                <p data-testid={`${dataTestId}.Paragraph`} className={cls.text}>
                     {text}
                 </p>
             )}

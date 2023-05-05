@@ -6,44 +6,39 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { TabItem, Tabs } from '@/shared/ui/Tabs';
 
 interface ArticleTypeTabsProps {
-  className?: string,
-  value: ArticleType,
-  onChangeType: (type: TabItem<ArticleType>) => void,
+    className?: string;
+    value: ArticleType;
+    onChangeType: (type: TabItem<ArticleType>) => void;
 }
 
 const ArticleTypeTabs = memo((props: ArticleTypeTabsProps) => {
-    const {
-        className,
-        onChangeType,
-        value,
-    } = props;
+    const { className, onChangeType, value } = props;
     const { t } = useTranslation();
 
-    const typeTabs = useMemo<TabItem<ArticleType>[]>(() => [
-        {
-            value: 'ALL',
-            content: t('Все статьи'),
-        },
-        {
-            value: 'IT',
-            content: t('Айти'),
-        },
-        {
-            value: 'ECONOMICS',
-            content: t('Экономика'),
-        },
-        {
-            value: 'SCIENCE',
-            content: t('Наука'),
-        },
-    ], [t]);
+    const typeTabs = useMemo<TabItem<ArticleType>[]>(
+        () => [
+            {
+                value: 'ALL',
+                content: t('Все статьи'),
+            },
+            {
+                value: 'IT',
+                content: t('Айти'),
+            },
+            {
+                value: 'ECONOMICS',
+                content: t('Экономика'),
+            },
+            {
+                value: 'SCIENCE',
+                content: t('Наука'),
+            },
+        ],
+        [t],
+    );
     return (
         <div className={classNames('', {}, [className])}>
-            <Tabs
-                onTabClick={onChangeType}
-                tabs={typeTabs}
-                value={value}
-            />
+            <Tabs onTabClick={onChangeType} tabs={typeTabs} value={value} />
         </div>
     );
 });

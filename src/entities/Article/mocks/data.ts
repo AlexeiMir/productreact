@@ -13,11 +13,7 @@ export const articleMock = {
         avatar: 'https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"',
     },
     createdAt: '26.02.2022',
-    type: [
-        'IT',
-        'ECONOMICS',
-        'SCIENCE',
-    ],
+    type: ['IT', 'ECONOMICS', 'SCIENCE'],
     blocks: [
         {
             id: '1',
@@ -80,9 +76,7 @@ export const articleMock = {
     ],
 } as Article;
 
-export const articlesMock = new Array(9)
-    .fill(0)
-    .map((item, index) => ({
-        ...articleMock,
-        id: String(index),
-    }));
+export const articlesMock = new Array(9).fill(0).map((item, index) => ({
+    ...articleMock,
+    id: String(index),
+}));

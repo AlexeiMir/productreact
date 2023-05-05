@@ -9,6 +9,7 @@ module.exports = {
         'airbnb',
         'plugin:i18next/recommended',
         'plugin:storybook/recommended',
+        'prettier',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -27,14 +28,14 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-indent': [2, 4],
-        'react/jsx-indent-props': [2, 4],
         'unused-imports/no-unused-imports': 'error',
-        indent: [2, 4],
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-filename-extension': [2, {
-            extensions: ['.js', '.jsx', 'tsx'],
-        }],
+        'react/jsx-filename-extension': [
+            2,
+            {
+                extensions: ['.js', '.jsx', 'tsx'],
+            },
+        ],
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'no-shadow': 'off',
@@ -49,36 +50,49 @@ module.exports = {
         'jsx-a11y/click-events-have-key-events': 'off',
         'jsx-a11y/no-static-element-interactions': 'off',
         'react/no-array-index-key': 'off',
-        'i18next/no-literal-string': ['error', {
-            markupOnly: true,
-            ignoreAttribute: [
-                'data-testid',
-                'to',
-                'target',
-                'direction',
-                'justify',
-                'align',
-                'gap',
-                'role',
-                'as',
-                'tag',
-                'border',
-            ],
-        }],
-        'max-len': ['error', {
-            ignoreComments: true,
-            code: 120,
-        }],
+        'i18next/no-literal-string': [
+            'error',
+            {
+                markupOnly: true,
+                ignoreAttribute: [
+                    'data-testid',
+                    'to',
+                    'target',
+                    'direction',
+                    'justify',
+                    'align',
+                    'gap',
+                    'role',
+                    'as',
+                    'tag',
+                    'border',
+                ],
+            },
+        ],
+        'max-len': [
+            'error',
+            {
+                ignoreComments: true,
+                code: 120,
+            },
+        ],
         'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
         'react-hooks/exhaustive-deps': 'error', // Checks effect dependencies
         'no-param-reassign': 'off',
         'no-undef': 'off',
         'arrow-body-style': 'off',
         'feature-sliced-design-checker/path-checker': ['error', { alias: '@' }],
-        'feature-sliced-design-checker/public-api-imports': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.ts', '**/*.stories.ts', '**/StoreDecorator.tsx'],
-        }],
+        'feature-sliced-design-checker/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.ts',
+                    '**/*.stories.ts',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
         'feature-sliced-design-checker/layer-imports': [
             'error',
             {
@@ -103,17 +117,20 @@ module.exports = {
                 },
             },
         ],
+        "react/jsx-max-props-per-line": ['error', { "maximum": 4 }],
     },
     globals: {
         __IS_DEV__: true,
         __API__: true,
         __PROJECT__: true,
     },
-    overrides: [{
-        files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-        rules: {
-            'i18next/no-literal-string': 'off',
-            'max-len': 'off',
+    overrides: [
+        {
+            files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+                'max-len': 'off',
+            },
         },
-    }],
+    ],
 };

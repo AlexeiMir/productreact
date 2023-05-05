@@ -8,24 +8,17 @@ import { Button, Input } from '@/shared/ui';
 import { HStack } from '@/shared/ui/Stack';
 
 export interface AddCommentFormProps {
-  className?: string,
-  text?: string,
-  error?: string,
-  onChange: (val: string) => void;
-  onClick: () => void;
+    className?: string;
+    text?: string;
+    error?: string;
+    onChange: (val: string) => void;
+    onClick: () => void;
 }
 
 const AddCommentForm = memo((props: AddCommentFormProps) => {
-    const {
-        className,
-        text,
-        error,
-        onChange,
-        onClick,
-    } = props;
+    const { className, text, error, onChange, onClick } = props;
     const { t } = useTranslation();
     return (
-
         <HStack
             data-testid="AddCommentForm"
             justify="between"
@@ -39,15 +32,10 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
                 onChange={onChange}
                 placeholder={t('Введите текст комментария')}
             />
-            <Button
-                data-testid="AddCommentForm.Button"
-                onClick={onClick}
-            >
+            <Button data-testid="AddCommentForm.Button" onClick={onClick}>
                 {t('Отправить')}
-
             </Button>
         </HStack>
-
     );
 });
 

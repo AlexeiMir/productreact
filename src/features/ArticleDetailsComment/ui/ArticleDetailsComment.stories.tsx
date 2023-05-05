@@ -13,7 +13,11 @@ export default {
     },
 } as ComponentMeta<typeof ArticleDetailsComment>;
 
-const Template: ComponentStory<typeof ArticleDetailsComment> = (args) => <Suspense fallback=""><ArticleDetailsComment {...args} /></Suspense>;
+const Template: ComponentStory<typeof ArticleDetailsComment> = (args) => (
+    <Suspense fallback="">
+        <ArticleDetailsComment {...args} />
+    </Suspense>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {

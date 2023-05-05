@@ -3,6 +3,8 @@ export default function lazyLoadingTimeout<T>(
     countMSec: number,
 ): Promise<T> {
     return new Promise((resolve) => {
-        setTimeout(() => { resolve(dynamicImport); }, countMSec);
+        setTimeout(() => {
+            resolve(dynamicImport);
+        }, countMSec);
     });
 }

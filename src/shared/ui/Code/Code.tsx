@@ -8,8 +8,8 @@ import CopyIcon from '@/shared/asserts/icons/copy-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 
 interface CodeProps {
-className?: string,
-text: string
+    className?: string;
+    text: string;
 }
 
 const Code = memo((props: CodeProps) => {
@@ -26,9 +26,7 @@ const Code = memo((props: CodeProps) => {
             >
                 <CopyIcon className={cls.copyIcon} />
             </Button>
-            <code>
-                {text}
-            </code>
+            <code>{text}</code>
         </pre>
     );
 });

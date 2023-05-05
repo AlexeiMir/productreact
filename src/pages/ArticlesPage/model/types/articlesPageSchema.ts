@@ -9,19 +9,19 @@ import {
 import { SortOrder } from '@/shared/types/sort/sortOrder';
 
 export interface ArticlesPageSchema extends EntityState<Article> {
-  isLoading?: boolean,
-  error?: string,
+    isLoading?: boolean;
+    error?: string;
 
-  view: ArticleView,
-  // pagination
-  page: number,
-  limit: number,
-  hasMore: boolean,
+    view: ArticleView;
+    // pagination
+    page: number;
+    limit: number;
+    hasMore: boolean;
 
-  order: SortOrder,
-  sort: ArticleSortField,
-  search: string,
-  type: ArticleType
+    order: SortOrder;
+    sort: ArticleSortField;
+    search: string;
+    type: ArticleType;
 
-  _inited: boolean
+    _inited: boolean;
 }

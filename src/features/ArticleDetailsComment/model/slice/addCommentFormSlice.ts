@@ -4,7 +4,6 @@ import { AddCommentFormSchema } from '@/entities/Article';
 
 const initialState: AddCommentFormSchema = {
     text: '',
-
 };
 
 export const addCommentFormSlice = createSlice({

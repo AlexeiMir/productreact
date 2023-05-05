@@ -14,7 +14,7 @@ import { ButtonSize, ButtonTheme } from '@/shared/ui/Button';
 import { VStack } from '@/shared/ui/Stack';
 
 interface SidebarProps {
- className?: string;
+    className?: string;
 }
 
 export const Sidebar = memo(({ className }: SidebarProps) => {
@@ -24,20 +24,24 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         setCollapsed((prev) => !prev);
     };
 
-    const itemsList = useMemo(() => (
-        sidebarItemsList.map((item) => (
-            <SidebarItem
-                item={item}
-                key={item.path}
-                collapsed={collapsed}
-            />
-        ))
-    ), [collapsed, sidebarItemsList]);
+    const itemsList = useMemo(
+        () =>
+            sidebarItemsList.map((item) => (
+                <SidebarItem
+                    item={item}
+                    key={item.path}
+                    collapsed={collapsed}
+                />
+            )),
+        [collapsed, sidebarItemsList],
+    );
 
     return (
         <aside
             data-testid="sidebar"
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
         >
             <Button
                 data-testid="sidebar-toggle"
@@ -47,23 +51,15 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 square
                 size={ButtonSize.L}
             >
-                { collapsed ? '>' : '<'}
-
+                {collapsed ? '>' : '<'}
             </Button>
-            <VStack
-                role="navigation"
-                gap="8"
-                className={cls.items}
-            >
+            <VStack role="navigation" gap="8" className={cls.items}>
                 {itemsList}
             </VStack>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher
-                    short={collapsed}
-                />
+                <LangSwitcher short={collapsed} />
             </div>
-
         </aside>
     );
 });

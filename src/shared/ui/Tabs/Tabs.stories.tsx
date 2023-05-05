@@ -1,8 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import {
-    ComponentStory,
-    ComponentMeta,
-} from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import React from 'react';
 
 import { Tabs } from './Tabs';

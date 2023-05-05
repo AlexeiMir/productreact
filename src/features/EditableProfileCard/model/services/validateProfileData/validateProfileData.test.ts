@@ -29,7 +29,11 @@ describe('validateProfileData.test', () => {
             city: 'asf',
             currency: Currency.USD,
         };
-        const result = validateProfileData({ ...data, first: '', lastname: '' });
+        const result = validateProfileData({
+            ...data,
+            first: '',
+            lastname: '',
+        });
         expect(result).toEqual([ValidateProfileError.INCORRECT_USER_DATA]);
     });
     test('incorrect age', () => {
@@ -71,8 +75,6 @@ describe('validateProfileData.test', () => {
     });
     test('no data', () => {
         const result = validateProfileData(undefined);
-        expect(result).toEqual([
-            ValidateProfileError.NO_DATA,
-        ]);
+        expect(result).toEqual([ValidateProfileError.NO_DATA]);
     });
 });

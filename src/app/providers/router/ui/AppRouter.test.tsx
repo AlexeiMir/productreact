@@ -4,7 +4,11 @@ import AppRouter from './AppRouter';
 
 import { UserRole } from '@/entities/User';
 import { componentRender } from '@/shared/lib/test/componentRender/componentRender';
-import { getRouteAbout, getRouteAdmin, getRouteProfile } from '@/shared/types/router/router';
+import {
+    getRouteAbout,
+    getRouteAdmin,
+    getRouteProfile,
+} from '@/shared/types/router/router';
 
 describe('AppRouter.test', () => {
     test('app/router/AppRouter', async () => {

@@ -14,20 +14,23 @@ export default {
     },
 } as ComponentMeta<typeof ArticlesPage>;
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+const Template: ComponentStory<typeof ArticlesPage> = (args) => (
+    <ArticlesPage {...args} />
+);
 
 export const Primary = Template.bind({});
-Primary.args = {
-};
+Primary.args = {};
 
-Primary.decorators = [StoreDecorator({
-    articlesPage: {
-        ids: ['1', '2'],
-        entities: {
-            1: articleMock,
-            2: articleMock,
+Primary.decorators = [
+    StoreDecorator({
+        articlesPage: {
+            ids: ['1', '2'],
+            entities: {
+                1: articleMock,
+                2: articleMock,
+            },
+            isLoading: false,
+            page: 1,
         },
-        isLoading: false,
-        page: 1,
-    },
-})];
+    }),
+];

@@ -12,13 +12,12 @@ import { HStack, VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
 interface RatingCardProps {
-  className?: string,
-  title?: string,
-  feedbackTitle?: string,
-  rate?: number,
-  onCancel?: (starsCount: number) => void,
-  onAccept?: (starsCount: number, feedback?: string) => void,
-
+    className?: string;
+    title?: string;
+    feedbackTitle?: string;
+    rate?: number;
+    onCancel?: (starsCount: number) => void;
+    onAccept?: (starsCount: number, feedback?: string) => void;
 }
 
 const RatingCard = memo((props: RatingCardProps) => {
@@ -37,14 +36,17 @@ const RatingCard = memo((props: RatingCardProps) => {
 
     const [feedback, setfFeedback] = useState('');
 
-    const onSelectStars = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (feedbackTitle) {
-            setIsModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [feedbackTitle, onAccept]);
+    const onSelectStars = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (feedbackTitle) {
+                setIsModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [feedbackTitle, onAccept],
+    );
 
     const cancelHandle = useCallback(() => {
         onCancel?.(starsCount);
@@ -54,11 +56,7 @@ const RatingCard = memo((props: RatingCardProps) => {
     const acceptHandle = useCallback(() => {
         onAccept?.(starsCount, feedback);
         setIsModalOpen(false);
-    }, [
-        onAccept,
-        starsCount,
-        feedback,
-    ]);
+    }, [onAccept, starsCount, feedback]);
 
     const modalContent = (
         <>
@@ -86,56 +84,41 @@ const RatingCard = memo((props: RatingCardProps) => {
                     size={40}
                 />
             </VStack>
-            {
-                isMobile
-                    ? (
-                        <Drawer
-                            isOpen={isModalOpen}
-                            lazy
-                            onClose={cancelHandle}
+            {isMobile ? (
+                <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>
+                    <VStack gap="32">
+                        {modalContent}
+                        <Button
+                            fullWidth
+                            size={ButtonSize.L}
+                            onClick={acceptHandle}
                         >
-                            <VStack gap="32">
-                                {modalContent}
-                                <Button
-                                    fullWidth
-                                    size={ButtonSize.L}
-                                    onClick={acceptHandle}
-                                >
-                                    {t('Отправить')}
-                                </Button>
-                            </VStack>
-                        </Drawer>
-
-                    )
-                    : (
-                        <Modal isOpen={isModalOpen} lazy>
-                            <VStack gap="32" max>
-                                {modalContent}
-                                <HStack
-                                    justify="end"
-                                    max
-                                    gap="16"
-                                >
-                                    <Button
-                                        data-testid="RatingCard.Close"
-                                        onClick={cancelHandle}
-                                        theme={ButtonTheme.OUTLINE_RED}
-                                    >
-                                        {t('Закрыть')}
-                                    </Button>
-                                    <Button
-                                        data-testid="RatingCard.Send"
-                                        onClick={acceptHandle}
-                                    >
-                                        {t('Отправить')}
-                                    </Button>
-
-                                </HStack>
-                            </VStack>
-                        </Modal>
-                    )
-            }
-
+                            {t('Отправить')}
+                        </Button>
+                    </VStack>
+                </Drawer>
+            ) : (
+                <Modal isOpen={isModalOpen} lazy>
+                    <VStack gap="32" max>
+                        {modalContent}
+                        <HStack justify="end" max gap="16">
+                            <Button
+                                data-testid="RatingCard.Close"
+                                onClick={cancelHandle}
+                                theme={ButtonTheme.OUTLINE_RED}
+                            >
+                                {t('Закрыть')}
+                            </Button>
+                            <Button
+                                data-testid="RatingCard.Send"
+                                onClick={acceptHandle}
+                            >
+                                {t('Отправить')}
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </Modal>
+            )}
         </Card>
     );
 });

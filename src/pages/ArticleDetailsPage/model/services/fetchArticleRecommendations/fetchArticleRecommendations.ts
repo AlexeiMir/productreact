@@ -4,27 +4,21 @@ import { ThunkConfig } from '@/app/providers/StoreProvider';
 import { Article } from '@/entities/Article';
 
 export const fetchArticleRecommendations = createAsyncThunk<
-  Article[],
-  void,
-  ThunkConfig<string>
+    Article[],
+    void,
+    ThunkConfig<string>
 >(
     'articlesDetailsPage/fetchArticleRecommendations',
     async (props, thunkAPI) => {
-        const {
-            dispatch, rejectWithValue, extra, getState,
-        } = thunkAPI;
+        const { dispatch, rejectWithValue, extra, getState } = thunkAPI;
 
         try {
-            const response = await extra.api.get<Article[]>(
-                '/articles',
-                {
-                    params: {
-                        _expand: 'user',
-                        _limit: 4,
-
-                    },
+            const response = await extra.api.get<Article[]>('/articles', {
+                params: {
+                    _expand: 'user',
+                    _limit: 4,
                 },
-            );
+            });
             if (!response.data) {
                 throw new Error();
             }

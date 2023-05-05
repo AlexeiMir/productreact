@@ -14,7 +14,9 @@ export default {
     },
 } as ComponentMeta<typeof EditableProfileCard>;
 
-const Template: ComponentStory<typeof EditableProfileCard> = (arg) => <EditableProfileCard {...arg} />;
+const Template: ComponentStory<typeof EditableProfileCard> = (arg) => (
+    <EditableProfileCard {...arg} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {};

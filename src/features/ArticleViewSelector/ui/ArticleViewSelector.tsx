@@ -12,9 +12,9 @@ import { ButtonTheme } from '@/shared/ui/Button';
 import { Icon } from '@/shared/ui/Icon';
 
 interface ArticleViewSelectorProps {
-  className?: string,
-  view: ArticleView,
-  onViewClick?: (view: ArticleView) => void
+    className?: string;
+    view: ArticleView;
+    onViewClick?: (view: ArticleView) => void;
 }
 
 const viewTypes = [
@@ -30,11 +30,7 @@ const viewTypes = [
 
 const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
     const { t } = useTranslation();
-    const {
-        className,
-        view,
-        onViewClick,
-    } = props;
+    const { className, view, onViewClick } = props;
     const onClick = (view: ArticleView) => () => {
         onViewClick?.(view);
     };
@@ -48,7 +44,9 @@ const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
                     key={viewType.view}
                 >
                     <Icon
-                        className={classNames('', { [cls.notSelected]: viewType.view !== view })}
+                        className={classNames('', {
+                            [cls.notSelected]: viewType.view !== view,
+                        })}
                         Svg={viewType.icon}
                     />
                 </Button>

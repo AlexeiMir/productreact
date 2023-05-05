@@ -1,9 +1,9 @@
 export enum ArticleSortField {
-  VIEWS = 'views',
-  TITLE = 'title',
-  CREATED = 'createdAt'
+    VIEWS = 'views',
+    TITLE = 'title',
+    CREATED = 'createdAt',
 }
 export enum ArticleView {
-  LIST = 'LIST',
-  GRID = 'GRID'
+    LIST = 'LIST',
+    GRID = 'GRID',
 }

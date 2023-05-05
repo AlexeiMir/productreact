@@ -11,7 +11,7 @@ import { Skeleton } from '@/shared/ui/Skeleton';
 import { VStack } from '@/shared/ui/Stack';
 
 interface NotificationListProps {
-className?: string
+    className?: string;
 }
 
 const NotificationList = memo((props: NotificationListProps) => {
@@ -42,10 +42,7 @@ const NotificationList = memo((props: NotificationListProps) => {
             className={classNames(cls.NotificationList, {}, [className])}
         >
             {data?.map((item) => (
-                <NotificationItem
-                    key={item.id}
-                    item={item}
-                />
+                <NotificationItem key={item.id} item={item} />
             ))}
         </VStack>
     );

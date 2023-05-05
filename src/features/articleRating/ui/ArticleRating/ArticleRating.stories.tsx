@@ -10,14 +10,18 @@ export default {
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-    decorators: [StoreDecorator({
-        user: {
-            authData: { id: '1' },
-        },
-    })],
+    decorators: [
+        StoreDecorator({
+            user: {
+                authData: { id: '1' },
+            },
+        }),
+    ],
 } as ComponentMeta<typeof ArticleRating>;
 
-const Template: ComponentStory<typeof ArticleRating> = (arg) => <ArticleRating {...arg} />;
+const Template: ComponentStory<typeof ArticleRating> = (arg) => (
+    <ArticleRating {...arg} />
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -50,8 +54,7 @@ withoutRate.parameters = {
             url: `${__API__}/article-ratings?userId=1&articleId=1`,
             method: 'GET',
             status: 200,
-            response: [
-            ],
+            response: [],
         },
     ],
 };
