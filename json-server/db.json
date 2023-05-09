@@ -33,24 +33,12 @@
             "userId": "2"
         }
     ],
-    "posts": [
-        {
-            "id": "1",
-            "title": "json-server",
-            "userId": "1"
-        },
-        {
-            "id": "2",
-            "title": "json-server",
-            "userId": "2"
-        }
-    ],
     "articles": [
         {
             "id": "1",
             "title": "Javascript news СВЕЖАЯ",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
+            "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png",
             "views": 1022,
             "createdAt": "26.04.2022",
             "userId": "1",
@@ -120,7 +108,7 @@
             "id": "2",
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+            "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/113415626/original/a17667d573bf34559bf0d35993ed76e57d43ad00/program-python-scripts-for-automation-and-data-mining.png",
             "views": 5204,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -164,7 +152,7 @@
             "id": "4",
             "title": "Scala news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://coursefreedl.com/wp-content/uploads/2020/01/Scala-Zero-To-Hero-Complete-Guide.jpg",
+            "img": "https://pluspng.com/img-png/scala-logo-png-scala-logo-1200x675.png",
             "views": 10222,
             "createdAt": "24.01.2022",
             "userId": "1",
@@ -186,7 +174,7 @@
             "id": "5",
             "title": "Golang news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://cdn-front.kwork.ru/pics/t3/88/16350941-1630390388.jpg",
+            "img": "https://www.itsec.ru/hs-fs/hubfs/ISR/Golang.png?width=750&name=Golang.png",
             "views": 10222,
             "createdAt": "26.02.2020",
             "userId": "1",
@@ -296,7 +284,7 @@
             "id": "10",
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+            "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/113415626/original/a17667d573bf34559bf0d35993ed76e57d43ad00/program-python-scripts-for-automation-and-data-mining.png",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -340,7 +328,7 @@
             "id": "12",
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+            "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/113415626/original/a17667d573bf34559bf0d35993ed76e57d43ad00/program-python-scripts-for-automation-and-data-mining.png",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -384,7 +372,7 @@
             "id": "14",
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+            "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/113415626/original/a17667d573bf34559bf0d35993ed76e57d43ad00/program-python-scripts-for-automation-and-data-mining.png",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -428,7 +416,7 @@
             "id": "16",
             "title": "Python news",
             "subtitle": "Что нового в JS за 2022 год?",
-            "img": "https://zsfond.ru/wp-content/uploads/2021/03/piton-1-1024x578.jpg",
+            "img": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/113415626/original/a17667d573bf34559bf0d35993ed76e57d43ad00/program-python-scripts-for-automation-and-data-mining.png",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -494,7 +482,7 @@
             "id": "18",
             "title": "Научная статья - Биология",
             "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+            "img": "https://kartinkin.net/uploads/posts/2022-05/1652214942_9-kartinkin-net-p-biologiya-krasivie-kartinki-10.jpg",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
@@ -513,400 +501,26 @@
             ]
         },
         {
-            "title": "TESTING ARTICLE",
+            "title": "Научная статья - Биология",
             "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+            "img": "https://kartinkin.net/uploads/posts/2022-05/1652214942_9-kartinkin-net-p-biologiya-krasivie-kartinki-10.jpg",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
             "type": ["SCIENCE"],
             "blocks": [],
-            "id": "VInZH3a"
+            "id": "guOLlgD"
         },
         {
-            "title": "TESTING ARTICLE",
+            "title": "Научная статья - Биология",
             "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+            "img": "https://i.ebayimg.com/00/s/NjE0WDc2OA==/z/PhIAAOSw~oFZvBcK/$_57.JPG?set_id=8800005007",
             "views": 1022,
             "createdAt": "26.02.2022",
             "userId": "1",
             "type": ["SCIENCE"],
             "blocks": [],
-            "id": "NBQiFXq"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "SFBeRkz"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "8zN9h6G"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Bmgdgw0"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "IWT-2zZ"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "zMgdFoX"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "YfYIO7E"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "_zH8na2"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "bxldBoj"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "WPLW9wP"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "ezC6DLF"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "U_7CQhQ"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "ekYVjyi"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "wIMQPTo"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "zMnkfjj"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "WX8LfBb"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "WtCgMpy"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "l7vs6zc"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Sf04jaC"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Zd-kGNR"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "DIqxR4E"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Ac_1-ih"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "kkz2QqF"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "NwMXzF7"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "jEiF9QR"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Rcy7mY9"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "6w2XB3m"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "_7eOMSL"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "95xwwBF"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "NzJKo10"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "_NlHn2k"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "Pqjy2Q4"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "ColkVnw"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "zTCHyvS"
-        },
-        {
-            "title": "TESTING ARTICLE",
-            "subtitle": "БиологиЯ",
-            "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-            "views": 1022,
-            "createdAt": "26.02.2022",
-            "userId": "1",
-            "type": ["SCIENCE"],
-            "blocks": [],
-            "id": "RfrHyeg"
+            "id": "6f91vPH"
         }
     ],
     "comments": [
@@ -989,16 +603,100 @@
             "id": "p5rMadd"
         },
         {
-            "articleId": "7",
+            "articleId": "3",
             "userId": "1",
-            "text": "wdwd",
-            "id": "fvBVmCQ"
+            "text": "123213",
+            "id": "Zu_RNuF"
+        },
+        {
+            "articleId": "8",
+            "userId": "1",
+            "text": "dfdsf",
+            "id": "4rFHQgJ"
+        },
+        {
+            "articleId": "8",
+            "userId": "1",
+            "text": "sdfsdf",
+            "id": "yYEdTI-"
         },
         {
             "articleId": "7",
             "userId": "1",
-            "text": "ndds",
-            "id": "fEHlU4-"
+            "text": "123213",
+            "id": "TR1yDY6"
+        },
+        {
+            "articleId": "7",
+            "userId": "1",
+            "text": "112",
+            "id": "wSAhqy5"
+        },
+        {
+            "articleId": "18",
+            "userId": "1",
+            "text": "12",
+            "id": "r6b1z-N"
+        },
+        {
+            "articleId": "18",
+            "userId": "2",
+            "text": "привет",
+            "id": "DENfTu6"
+        },
+        {
+            "articleId": "7",
+            "userId": "2",
+            "text": "33",
+            "id": "Ps59wrg"
+        },
+        {
+            "articleId": "7",
+            "userId": "2",
+            "text": "123",
+            "id": "zzYVth3"
+        },
+        {
+            "articleId": "7",
+            "userId": "2",
+            "text": "123",
+            "id": "WjF4c_d"
+        },
+        {
+            "articleId": "1",
+            "userId": "2",
+            "text": "privet",
+            "id": "fta748h"
+        },
+        {
+            "articleId": "2",
+            "userId": "2",
+            "text": "питон топ",
+            "id": "ZlmlUrg"
+        },
+        {
+            "articleId": "7",
+            "userId": "1",
+            "text": "123",
+            "id": "KmtWJR_"
+        },
+        {
+            "articleId": "8",
+            "userId": "2",
+            "text": "asdasd",
+            "id": "eB1A-7c"
+        },
+        {
+            "articleId": "2",
+            "userId": "1",
+            "text": "class",
+            "id": "wAZ_hJM"
+        },
+        {
+            "articleId": "2",
+            "userId": "1",
+            "text": "asfasf",
+            "id": "SygCNYE"
         }
     ],
     "users": [
@@ -1007,73 +705,78 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
-            "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
+            "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625"
         },
         {
             "id": "2",
             "username": "user",
             "password": "123",
             "roles": ["USER"],
-            "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
+            "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg"
         },
         {
             "id": "3",
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
-            "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
+            "avatar": "https://s1.1zoom.ru/big3/992/367659-alexfas01.jpg"
         },
         {
             "id": "4",
             "username": "testuser",
             "password": "123",
             "roles": ["ADMIN"],
-            "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
+            "avatar": "https://s1.1zoom.ru/big3/992/367659-alexfas01.jpg"
         }
     ],
     "profile": [
         {
             "id": "1",
-            "first": "jghwer",
-            "lastname": "asfewr",
+            "first": "timurasdasd",
+            "lastname": "ulbi",
             "age": 465,
             "currency": "RUB",
             "country": "Belarus",
             "city": "Moscow",
             "username": "admin213",
-            "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+            "avatar": "https://mobimg.b-cdn.net/v3/fetch/22/2207633df03a819cd72889249c8361a8.jpeg?w=1470&r=0.5625"
         },
         {
             "id": "2",
             "first": "ulbi tv",
             "lastname": "asf",
             "age": 465,
-            "currency": "RUB",
-            "country": "Russia",
+            "currency": "EUR",
+            "country": "Ukraine",
             "city": "Moscow",
             "username": "ulbi tv",
-            "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
-        },
-        {
-            "id": "3",
-            "first": "manager",
-            "lastname": "asf",
-            "age": 465,
-            "currency": "RUB",
-            "country": "Russia",
-            "city": "Moscow",
-            "username": "ulbi tv",
-            "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+            "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg"
         },
         {
             "id": "4",
             "first": "test",
-            "lastname": "test",
-            "age": 18,
-            "currency": "RUB",
-            "country": "Russia",
+            "lastname": "user",
+            "age": 465,
+            "currency": "EUR",
+            "country": "Ukraine",
             "city": "Moscow",
-            "username": "ulbi tv",
+            "username": "testuser",
             "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
         }
     ],
@@ -1084,13 +787,6 @@
             "feedback": "Хорошая статья",
             "userId": "1",
             "articleId": "1"
-        },
-        {
-            "id": "2",
-            "rate": 4,
-            "feedback": "Хорошая статья",
-            "userId": "1",
-            "articleId": "2"
         },
         {
             "userId": "1",
@@ -1121,18 +817,18 @@
             "id": "bcPnbbZ"
         },
         {
-            "articleId": "8",
-            "rate": 5,
-            "userId": "1",
-            "feedback": "Круто",
-            "id": "NfgaaTv"
+            "userId": "2",
+            "articleId": "1",
+            "rate": 4,
+            "feedback": "asdasdasdad",
+            "id": "1I3E5gT"
         },
         {
-            "articleId": "kkz2QqF",
-            "rate": 5,
-            "userId": "4",
-            "feedback": "feedback",
-            "id": "2uNCPBa"
+            "userId": "1",
+            "articleId": "2",
+            "rate": 2,
+            "feedback": "asdasdasd",
+            "id": "xbwnNBF"
         }
     ],
     "profile-ratings": [
@@ -1149,13 +845,6 @@
             "feedback": "Хорошая статья",
             "userId": "1",
             "profileId": "2"
-        },
-        {
-            "profileId": "3",
-            "rate": 5,
-            "userId": "1",
-            "feedback": "Хорошо заполнен",
-            "id": "h5dBL8e"
         }
     ]
 }

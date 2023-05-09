@@ -14,6 +14,9 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { toggleFeatures } from '@/shared/lib/features';
+import { Card } from '@/shared/ui/Card';
+import { VStack } from '@/shared/ui/Stack';
 import { Page } from '@/widgets/Page';
 
 interface ArticleDetailsPageProps {
@@ -28,6 +31,12 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('articleDetailes');
     const { id = '1' } = useParams<{ id: string }>();
 
+    const articleRatingCard = toggleFeatures({
+        name: 'isArticleRatingEnabled',
+        on: () => <ArticleRating articleId={id} />,
+        off: () => <Card>{t('Оценка статей скоро появится!')}</Card>,
+    });
+
     if (!id) {
         return (
             <Page className={classNames('', {}, [className])}>
@@ -39,11 +48,13 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     return (
         <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
             <Page className={classNames('', {}, [className])}>
-                <ArticleDetailsPageHeader />
-                <ArticleDetails id={id} />
-                <ArticleRating articleId={id} />
-                <ArticleRecommendationsList />
-                <ArticleDetailsComment id={id} />
+                <VStack gap="16" max>
+                    <ArticleDetailsPageHeader />
+                    <ArticleDetails id={id} />
+                    {articleRatingCard}
+                    <ArticleRecommendationsList />
+                    <ArticleDetailsComment id={id} />
+                </VStack>
             </Page>
         </DynamicModuleLoader>
     );
