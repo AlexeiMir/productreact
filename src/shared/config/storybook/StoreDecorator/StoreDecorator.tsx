@@ -1,4 +1,3 @@
-import { ReducersMapObject } from '@reduxjs/toolkit';
 import { Story } from '@storybook/react';
 
 import { StoreProvider, StateSchema } from '@/app/providers/StoreProvider';
@@ -18,10 +17,7 @@ const defaultAsyncReducers: ReducersList = {
 };
 
 export const StoreDecorator =
-    (
-        state: DeepPartial<StateSchema>,
-        asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>,
-    ) =>
+    (state: DeepPartial<StateSchema>, asyncReducers?: ReducersList) =>
     (StoryComponent: Story) =>
         (
             <StoreProvider
