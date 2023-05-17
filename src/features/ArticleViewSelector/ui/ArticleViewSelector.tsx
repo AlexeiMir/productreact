@@ -8,8 +8,8 @@ import ListIcon from '@/shared/asserts/icons/list-24-24.svg';
 import TiledIcon from '@/shared/asserts/icons/tiled-24-24.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui';
-import { ButtonTheme } from '@/shared/ui/Button';
-import { Icon } from '@/shared/ui/Icon';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 
 interface ArticleViewSelectorProps {
     className?: string;

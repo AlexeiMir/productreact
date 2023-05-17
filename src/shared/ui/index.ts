@@ -1,8 +1,8 @@
-export { StarRating } from './StarRating/StarRating';
+export { StarRating } from './deprecated/StarRating/StarRating';
 
-export { Select } from './Select/Select';
-export { AppLink } from './AppLink/AppLink';
-export { Button } from './Button/Button';
-export { Loader } from './Loader/Loader';
-export { Input } from './Input/Input';
-export { Avatar } from './Avatar/Avatar';
+export { Select } from './deprecated/Select/Select';
+export { AppLink } from './deprecated/AppLink/AppLink';
+export { Button } from './deprecated/Button/Button';
+export { Loader } from './deprecated/Loader/Loader';
+export { Input } from './deprecated/Input/Input';
+export { Avatar } from './deprecated/Avatar/Avatar';

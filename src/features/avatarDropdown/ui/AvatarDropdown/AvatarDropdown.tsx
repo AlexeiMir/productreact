@@ -14,7 +14,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getRouteAdmin, getRouteProfile } from '@/shared/types/router/router';
 import { Avatar } from '@/shared/ui';
-import { Dropdown } from '@/shared/ui/Popups';
+import { Dropdown } from '@/shared/ui/deprecated/Popups';
 
 interface AvatarDropdownProps {
     className?: string;

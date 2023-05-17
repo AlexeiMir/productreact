@@ -12,10 +12,10 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { getRouteArticleCreate } from '@/shared/types/router/router';
 import { AppLink, Button } from '@/shared/ui';
-import { AppLinkTheme } from '@/shared/ui/AppLink';
-import { ButtonTheme } from '@/shared/ui/Button';
-import { HStack } from '@/shared/ui/Stack';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { HStack } from '@/shared/ui/deprecated/Stack';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 
 interface NavbarProps {
     className?: string;

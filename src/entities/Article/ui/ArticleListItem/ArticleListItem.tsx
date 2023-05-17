@@ -11,12 +11,12 @@ import EyeIcon from '@/shared/asserts/icons/eye-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getRouteArticleDetails } from '@/shared/types/router/router';
 import { AppLink, Avatar, Button } from '@/shared/ui';
-import { AppImage } from '@/shared/ui/AppImage';
-import { ButtonTheme } from '@/shared/ui/Button';
-import { Card } from '@/shared/ui/Card';
-import { Icon } from '@/shared/ui/Icon';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { Text } from '@/shared/ui/Text';
+import { AppImage } from '@/shared/ui/deprecated/AppImage';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { Icon } from '@/shared/ui/deprecated/Icon';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { Text } from '@/shared/ui/deprecated/Text';
 
 interface ArticleListItemProps {
     className?: string;

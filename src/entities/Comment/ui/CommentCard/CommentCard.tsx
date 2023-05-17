@@ -8,9 +8,9 @@ import cls from './CommentCard.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getRouteProfile } from '@/shared/types/router/router';
 import { AppLink, Avatar } from '@/shared/ui';
-import { Skeleton } from '@/shared/ui/Skeleton';
-import { VStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import { Text } from '@/shared/ui/deprecated/Text';
 
 interface CommentCardProps {
     className?: string;

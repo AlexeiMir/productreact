@@ -8,7 +8,7 @@ import cls from './SidebarItem.module.scss';
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppLink } from '@/shared/ui';
-import { AppLinkTheme } from '@/shared/ui/AppLink';
+import { AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
 
 interface SidebarItemProps {
     collapsed: boolean;

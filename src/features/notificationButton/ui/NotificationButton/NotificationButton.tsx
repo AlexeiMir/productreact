@@ -8,10 +8,10 @@ import NotificationIcon from '@/shared/asserts/icons/notification-20-20.svg';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import { detectDevice } from '@/shared/lib/detectDevice/detectDevice';
 import { Button } from '@/shared/ui';
-import { ButtonTheme } from '@/shared/ui/Button';
-import { Drawer } from '@/shared/ui/Drawer';
-import { Icon } from '@/shared/ui/Icon';
-import { Popover } from '@/shared/ui/Popups';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Drawer } from '@/shared/ui/deprecated/Drawer';
+import { Icon } from '@/shared/ui/deprecated/Icon';
+import { Popover } from '@/shared/ui/deprecated/Popups';
 
 interface NotificationButtonProps {
     className?: string;

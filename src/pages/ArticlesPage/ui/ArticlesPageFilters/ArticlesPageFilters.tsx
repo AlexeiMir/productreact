@@ -23,8 +23,8 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { SortOrder } from '@/shared/types/sort/sortOrder';
 import { Input } from '@/shared/ui';
-import { Card } from '@/shared/ui/Card';
-import { TabItem } from '@/shared/ui/Tabs';
+import { Card } from '@/shared/ui/deprecated/Card';
+import { TabItem } from '@/shared/ui/deprecated/Tabs';
 
 interface ArticlesPageFiltersProps {
     className?: string;

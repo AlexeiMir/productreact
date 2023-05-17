@@ -14,7 +14,7 @@ import {
     getRouteArticles,
 } from '@/shared/types/router/router';
 import { Button } from '@/shared/ui';
-import { ButtonTheme } from '@/shared/ui/Button';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;

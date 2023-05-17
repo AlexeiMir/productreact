@@ -18,8 +18,8 @@ import {
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Button, Input } from '@/shared/ui';
-import { ButtonTheme } from '@/shared/ui/Button';
-import { Text, TextTheme } from '@/shared/ui/Text';
+import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 
 export interface LoginFormProps {
     className?: string;
