@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 import cls from './AddCommentForm.module.scss';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, Input } from '@/shared/ui';
+import { Button } from '@/shared/ui/deprecated/Button';
+import { Input } from '@/shared/ui/deprecated/Input';
 import { HStack } from '@/shared/ui/deprecated/Stack';
 
 export interface AddCommentFormProps {

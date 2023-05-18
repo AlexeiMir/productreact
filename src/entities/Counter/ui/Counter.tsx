@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 import { useCounterActions } from '../model/slice/counterSlice';
 
-import { Button } from '@/shared/ui';
+import { Button } from '@/shared/ui/deprecated/Button';
 
 export const Counter = () => {
     const { t } = useTranslation();

@@ -13,7 +13,7 @@ import {
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { getRouteAdmin, getRouteProfile } from '@/shared/types/router/router';
-import { Avatar } from '@/shared/ui';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Dropdown } from '@/shared/ui/deprecated/Popups';
 
 interface AvatarDropdownProps {

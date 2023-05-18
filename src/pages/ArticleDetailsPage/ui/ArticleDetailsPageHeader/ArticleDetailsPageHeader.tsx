@@ -13,8 +13,7 @@ import {
     getRouteArticleEdit,
     getRouteArticles,
 } from '@/shared/types/router/router';
-import { Button } from '@/shared/ui';
-import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 
 interface ArticleDetailsPageHeaderProps {
     className?: string;

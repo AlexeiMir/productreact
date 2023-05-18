@@ -47,8 +47,9 @@ export const globalTypes = {
 //     document.dir = direction;
 // });
 
+// addDecorator(TranslationDecorator);
+
 addDecorator(StyleDecorator);
+addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator);
 addDecorator(SuspenseDecorator);
-// addDecorator(TranslationDecorator);
-addDecorator(ThemeDecorator(Theme.LIGHT));

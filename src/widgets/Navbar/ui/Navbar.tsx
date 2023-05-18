@@ -11,9 +11,8 @@ import { NotificationButton } from '@/features/notificationButton';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ToggleFeatures } from '@/shared/lib/features';
 import { getRouteArticleCreate } from '@/shared/types/router/router';
-import { AppLink, Button } from '@/shared/ui';
-import { AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
-import { ButtonTheme } from '@/shared/ui/deprecated/Button';
+import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
 import { HStack } from '@/shared/ui/deprecated/Stack';
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text';
 

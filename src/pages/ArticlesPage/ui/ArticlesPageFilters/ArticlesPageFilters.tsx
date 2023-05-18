@@ -22,8 +22,8 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce';
 import { SortOrder } from '@/shared/types/sort/sortOrder';
-import { Input } from '@/shared/ui';
 import { Card } from '@/shared/ui/deprecated/Card';
+import { Input } from '@/shared/ui/deprecated/Input';
 import { TabItem } from '@/shared/ui/deprecated/Tabs';
 
 interface ArticlesPageFiltersProps {

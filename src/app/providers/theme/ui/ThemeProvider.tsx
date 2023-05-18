@@ -23,17 +23,8 @@ const ThemeProvider = (props: ThemeProviderProps) => {
         if (!isThemeInited && defaultTheme) {
             setTheme(defaultTheme);
             setThemeInited(true);
-            document.body.className = defaultTheme;
         }
     }, [isThemeInited, defaultTheme]);
-
-    // useEffect(() => {
-    //     if (theme) {
-    //         console.log('theme', theme);
-
-    //         document.body.className = theme;
-    //     }
-    // }, [theme, isThemeInited]);
 
     const defaulProps = useMemo(
         () => ({

@@ -7,7 +7,9 @@ import cls from './ProfileCard.module.scss';
 import { Country, CountrySelect } from '@/entities/Country';
 import { Currency, CurrencySelect } from '@/entities/Currency';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Avatar, Input, Loader } from '@/shared/ui';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Loader } from '@/shared/ui/deprecated/Loader';
 import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
 import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
 

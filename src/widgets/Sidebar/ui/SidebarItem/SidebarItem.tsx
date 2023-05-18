@@ -7,8 +7,13 @@ import cls from './SidebarItem.module.scss';
 
 import { getUserAuthData } from '@/entities/User';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppLink } from '@/shared/ui';
-import { AppLinkTheme } from '@/shared/ui/deprecated/AppLink';
+import { ToggleFeatures } from '@/shared/lib/features';
+import {
+    AppLinkTheme,
+    AppLink as AppLinkDeprecated,
+} from '@/shared/ui/deprecated/AppLink';
+import { AppLink } from '@/shared/ui/redesigned/AppLink';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface SidebarItemProps {
     collapsed: boolean;
@@ -16,22 +21,40 @@ interface SidebarItemProps {
 }
 
 const SidebarItem = ({ collapsed, item }: SidebarItemProps) => {
-    const { path, text, Icon, authOnly } = item;
     const { t } = useTranslation();
     const isAuth = useSelector(getUserAuthData);
 
-    if (authOnly && !isAuth) {
+    if (item.authOnly && !isAuth) {
         return null;
     }
     return (
-        <AppLink
-            className={classNames(cls.item, { [cls.collapsed]: collapsed })}
-            theme={AppLinkTheme.SECONDARY}
-            to={path}
-        >
-            <Icon className={cls.icon} />
-            <span className={cls.link}>{t(text)}</span>
-        </AppLink>
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            off={
+                <AppLinkDeprecated
+                    className={classNames(cls.item, {
+                        [cls.collapsed]: collapsed,
+                    })}
+                    theme={AppLinkTheme.SECONDARY}
+                    to={item.path}
+                >
+                    <item.Icon className={cls.icon} />
+                    <span className={cls.link}>{t(item.text)}</span>
+                </AppLinkDeprecated>
+            }
+            on={
+                <AppLink
+                    className={classNames(cls.itemRedesigned, {
+                        [cls.collapsedRedesigned]: collapsed,
+                    })}
+                    activeClassName={cls.active}
+                    to={item.path}
+                >
+                    <Icon Svg={item.Icon} className={cls.icon} />
+                    <span className={cls.link}>{t(item.text)}</span>
+                </AppLink>
+            }
+        />
     );
 };
 

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Loader } from '@/shared/ui';
+import { Loader } from '@/shared/ui/deprecated/Loader';
 import { Modal } from '@/shared/ui/deprecated/Modal';
 
 interface LoginModalProps {
