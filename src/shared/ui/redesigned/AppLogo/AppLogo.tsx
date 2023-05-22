@@ -1,6 +1,6 @@
 import { memo } from 'react';
 
-import { HStack } from '../../deprecated/Stack';
+import { HStack } from '../../redesigned/Stack';
 
 import cls from './AppLogo.module.scss';
 

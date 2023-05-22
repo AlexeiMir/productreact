@@ -10,7 +10,6 @@ import cls from './ArticleListItem.module.scss';
 import EyeIcon from '@/shared/asserts/icons/eye-20-20.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getRouteArticleDetails } from '@/shared/types/router/router';
-import { AppImage } from '@/shared/ui/deprecated/AppImage';
 import { AppLink } from '@/shared/ui/deprecated/AppLink';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
@@ -18,6 +17,7 @@ import { Card } from '@/shared/ui/deprecated/Card';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 import { Text } from '@/shared/ui/deprecated/Text';
+import { AppImage } from '@/shared/ui/redesigned/AppImage';
 
 interface ArticleListItemProps {
     className?: string;

@@ -6,7 +6,7 @@ import cls from './AddCommentForm.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '@/shared/ui/deprecated/Button';
 import { Input } from '@/shared/ui/deprecated/Input';
-import { HStack } from '@/shared/ui/deprecated/Stack';
+import { HStack } from '@/shared/ui/redesigned/Stack';
 
 export interface AddCommentFormProps {
     className?: string;
