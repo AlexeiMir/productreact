@@ -4,11 +4,20 @@ import { useTranslation } from 'react-i18next';
 import cls from './ArticleViewSelector.module.scss';
 
 import { ArticleView } from '@/entities/Article';
-import ListIcon from '@/shared/asserts/icons/list-24-24.svg';
-import TiledIcon from '@/shared/asserts/icons/tiled-24-24.svg';
+import ListIcon from '@/shared/asserts/icons/burger.svg';
+import ListIconDeprecated from '@/shared/asserts/icons/list-24-24.svg';
+import TiledIcon from '@/shared/asserts/icons/tile.svg';
+import TiledIconDeprecated from '@/shared/asserts/icons/tiled-24-24.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button';
-import { Icon } from '@/shared/ui/deprecated/Icon';
+import { ToggleFeatures, toggleFeatures } from '@/shared/lib/features';
+import {
+    Button as ButtonDeprecated,
+    ButtonTheme,
+} from '@/shared/ui/deprecated/Button';
+import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
+import { Card } from '@/shared/ui/redesigned/Card';
+import { getHStack } from '@/shared/ui/redesigned/Card/Card';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface ArticleViewSelectorProps {
     className?: string;
@@ -19,11 +28,19 @@ interface ArticleViewSelectorProps {
 const viewTypes = [
     {
         view: ArticleView.GRID,
-        icon: TiledIcon,
+        icon: toggleFeatures({
+            name: 'isAppRedesigned',
+            off: () => TiledIconDeprecated,
+            on: () => TiledIcon,
+        }),
     },
     {
         view: ArticleView.LIST,
-        icon: ListIcon,
+        icon: toggleFeatures({
+            name: 'isAppRedesigned',
+            off: () => ListIconDeprecated,
+            on: () => ListIcon,
+        }),
     },
 ];
 
@@ -34,25 +51,59 @@ const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         onViewClick?.(view);
     };
 
+    const flexClasses = getHStack({ gap: '16', justify: 'center' });
+
     return (
-        <div className={classNames(cls.ArticleViewSelector, {}, [className])}>
-            {viewTypes.map((viewType) => (
-                <Button
-                    onClick={onClick(viewType.view)}
-                    theme={ButtonTheme.CLEAR}
-                    key={viewType.view}
+        <ToggleFeatures
+            feature="isAppRedesigned"
+            off={
+                <div
+                    className={classNames(cls.ArticleViewSelector, {}, [
+                        className,
+                    ])}
                 >
-                    <Icon
-                        className={classNames('', {
-                            [cls.notSelected]: viewType.view !== view,
-                        })}
-                        width={24}
-                        height={24}
-                        Svg={viewType.icon}
-                    />
-                </Button>
-            ))}
-        </div>
+                    {viewTypes.map((viewType) => (
+                        <ButtonDeprecated
+                            onClick={onClick(viewType.view)}
+                            theme={ButtonTheme.CLEAR}
+                            key={viewType.view}
+                        >
+                            <IconDeprecated
+                                className={classNames('', {
+                                    [cls.notSelected]: viewType.view !== view,
+                                })}
+                                width={24}
+                                height={24}
+                                Svg={viewType.icon}
+                            />
+                        </ButtonDeprecated>
+                    ))}
+                </div>
+            }
+            on={
+                <Card
+                    border="round"
+                    className={classNames(
+                        cls.ArticleViewSelectorRedesigned,
+                        {},
+                        [className, ...flexClasses],
+                    )}
+                >
+                    {viewTypes.map((viewType) => (
+                        <Icon
+                            className={classNames('', {
+                                [cls.notSelected]: viewType.view !== view,
+                            })}
+                            width={24}
+                            height={24}
+                            Svg={viewType.icon}
+                            onClick={onClick(viewType.view)}
+                            clickable
+                        />
+                    ))}
+                </Card>
+            }
+        />
     );
 });
 

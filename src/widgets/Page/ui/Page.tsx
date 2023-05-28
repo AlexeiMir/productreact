@@ -32,7 +32,11 @@ const Page = (props: PageProps) => {
         getUIScrollByPath(state, pathname),
     );
     useInfiniteScroll({
-        wrapperRef,
+        wrapperRef: toggleFeatures({
+            name: 'isAppRedesigned',
+            off: () => wrapperRef,
+            on: () => undefined,
+        }),
         triggerRef,
         callBack: onScrollEnd,
     });

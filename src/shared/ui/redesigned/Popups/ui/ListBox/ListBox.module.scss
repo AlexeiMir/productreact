@@ -12,7 +12,7 @@
 
 .options {
     position: absolute;
-    background: var(--dark-bg-redesigned-bg);
+    background: var(--dark-bg-redesigned);
     box-shadow: 4px 4px 8px var(--dark-bg-redesigned);
     border-radius: 12px;
     z-index: 10000;
@@ -25,4 +25,8 @@
 
 .item {
     padding: 10px 20px;
+}
+
+.selected {
+    background: var(light-bg-redesigned);
 }

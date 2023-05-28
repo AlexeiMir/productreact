@@ -10,10 +10,10 @@ import cls from './Flex.module.scss';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
-type FlexJustify = 'start' | 'center' | 'end' | 'between';
-type FlexAlign = 'start' | 'center' | 'end';
-type FlexDirection = 'row' | 'column';
-type FlexGap = '4' | '8' | '16' | '32';
+export type FlexJustify = 'start' | 'center' | 'end' | 'between';
+export type FlexAlign = 'start' | 'center' | 'end';
+export type FlexDirection = 'row' | 'column';
+export type FlexGap = '4' | '8' | '16' | '32';
 
 type DivProps = DetailedHTMLProps<
     HTMLAttributes<HTMLDivElement>,

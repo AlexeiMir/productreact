@@ -3,6 +3,7 @@ import { addDecorator } from '@storybook/react';
 // import { TranslationDecorator }
 //     from 'shared/config/storybook/TranslationDecorator/TranslationDecorator';
 import { RouterDecorator } from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator';
+// import { StoreDecorator } from '../../src/shared/config/storybook/StoreDecorator/StoreDecorator';
 import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator/StyleDecorator';
 import { SuspenseDecorator } from '../../src/shared/config/storybook/SuspenseDecorator/SuspenseDecorator';
 import { ThemeDecorator } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator';
@@ -49,6 +50,14 @@ export const globalTypes = {
 
 // addDecorator(TranslationDecorator);
 
+// addDecorator(StoreDecorator({
+//   user: {
+//     authData: {
+//       jsonSettings: {
+//         theme: Theme.LIGHT
+//       }
+//     }
+// }}));
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator);

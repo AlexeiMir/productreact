@@ -70,6 +70,7 @@ const Dropdown = (props: DropdownProps) => {
                         <Menu.Item
                             key={`dropdown-key-index${index}`}
                             as={Fragment}
+                            disabled={item.disabled}
                         >
                             {content}
                         </Menu.Item>

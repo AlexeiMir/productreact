@@ -1,10 +1,15 @@
 .Card {
+    display: flex;
     padding: 15px;
-    border-radius: 12px;
 }
 
 .normal {
     background: var(--dark-bg-redesigned);
+    border-radius: 12px;
+}
+
+.round {
+    border-radius: 40px;
 }
 
 .light {
@@ -19,18 +24,66 @@
     width: 100%;
 }
 
-.gap_0 {
+.padding_0 {
     padding: 0;
 }
 
-.gap_8 {
+.padding_8 {
     padding: 8px;
 }
 
-.gap_16 {
+.padding_16 {
     padding: 16px;
 }
 
-.gap_24 {
+.padding_24 {
     padding: 24px;
+}
+
+.gap_8 {
+    gap: 8px;
+}
+
+.gap_16 {
+    gap: 16px;
+}
+
+.gap_24 {
+    gap: 24px;
+}
+
+.gap_32 {
+    gap: 32px;
+}
+
+.justify__center {
+    justify-content: center;
+}
+
+.justify__end {
+    justify-content: flex-end;
+}
+
+.justify__between {
+    justify-content: space-between;
+}
+
+.align__start {
+    align-items: flex-start;
+}
+
+.align__center {
+    align-items: center;
+}
+
+.align__end {
+    align-items: flex-end;
+}
+
+.direction__row {
+    flex-direction: row;
+}
+
+.direction__column {
+    flex-direction: column;
 }
