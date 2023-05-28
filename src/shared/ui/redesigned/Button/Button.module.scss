@@ -1,11 +1,32 @@
+.addonLeft svg,
+.addonRigh svg {
+    color: var(--hint-redesigned);
+}
+
 .Button {
-    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
     color: var(--text-redesigned);
     cursor: pointer;
 
     &:hover {
         color: var(--accent-redesigned);
+
+        .addonLeft svg,
+        .addonRigh svg {
+            color: var(--accent-redesigned);
+        }
     }
+}
+
+.addonLeft,
+.addonRight {
+    display: flex;
+}
+
+.withAddon {
+    padding: 0 16px;
 }
 
 .clear {

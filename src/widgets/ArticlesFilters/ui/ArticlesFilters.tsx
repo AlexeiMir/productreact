@@ -6,11 +6,13 @@ import cls from './ArticlesFilters.module.scss';
 import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { ArticleSortSelector } from '@/features/ArticleSortSelector';
 import { ArticleTypeTabs } from '@/features/ArticleTypeTabs';
+import SearchIcon from '@/shared/asserts/icons/search.svg';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { SortOrder } from '@/shared/types/sort/sortOrder';
 import { TabItem } from '@/shared/ui/deprecated/Tabs';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { getVStack } from '@/shared/ui/redesigned/Card/Card';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 import { Input } from '@/shared/ui/redesigned/Input';
 
 interface ArticlesFiltersProps {
@@ -50,6 +52,7 @@ const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
                 value={search}
                 onChange={onChangeSearch}
                 placeholder={t('Поиск')}
+                addonLeft={<Icon Svg={SearchIcon} />}
             />
             <ArticleTypeTabs
                 onChangeType={onChangeType}
