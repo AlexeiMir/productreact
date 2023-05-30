@@ -7,14 +7,19 @@ import {
     useState,
 } from 'react';
 
+import { HStack } from '../Stack';
+import { Text } from '../Text';
+
 import cls from './Input.module.scss';
 
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly'
+    'value' | 'onChange' | 'readOnly' | 'size'
 >;
+
+type InputSize = 's' | 'm' | 'l';
 
 interface InputProps extends HTMLInputProps {
     className?: string;
@@ -25,6 +30,8 @@ interface InputProps extends HTMLInputProps {
     onChange?: (value: string) => void;
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
+    label?: string;
+    size?: InputSize;
 }
 
 const Input = memo(
@@ -38,6 +45,8 @@ const Input = memo(
         readonly,
         addonLeft,
         addonRight,
+        label,
+        size = 'm',
         ...otherProps
     }: InputProps) => {
         const [isFocused, setIsFocused] = useState(false);
@@ -67,8 +76,13 @@ const Input = memo(
             [cls.withAddonRight]: Boolean(addonRight),
         };
 
-        return (
-            <div className={classNames(cls.InputWrapper, mods, [className])}>
+        const input = (
+            <div
+                className={classNames(cls.InputWrapper, mods, [
+                    className,
+                    cls[size],
+                ])}
+            >
                 <div className={cls.addonLeft}>{addonLeft}</div>
                 <input
                     // eslint-disable-next-line jsx-a11y/no-autofocus
@@ -86,6 +100,17 @@ const Input = memo(
                 <div className={cls.addonRight}>{addonRight}</div>
             </div>
         );
+
+        if (label) {
+            return (
+                <HStack gap="8" max>
+                    <Text text={label} />
+                    {input}
+                </HStack>
+            );
+        }
+
+        return input;
     },
 );
 

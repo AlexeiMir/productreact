@@ -51,8 +51,6 @@ const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
         onViewClick?.(view);
     };
 
-    const flexClasses = getHStack({ gap: '16', justify: 'center' });
-
     return (
         <ToggleFeatures
             feature="isAppRedesigned"
@@ -83,10 +81,11 @@ const ArticleViewSelector = memo((props: ArticleViewSelectorProps) => {
             on={
                 <Card
                     border="round"
+                    stackProps={getHStack({ gap: '16', justify: 'center' })}
                     className={classNames(
                         cls.ArticleViewSelectorRedesigned,
                         {},
-                        [className, ...flexClasses],
+                        [className],
                     )}
                 >
                     {viewTypes.map((viewType) => (

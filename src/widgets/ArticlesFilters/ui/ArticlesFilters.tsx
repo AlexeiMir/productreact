@@ -43,10 +43,8 @@ const ArticlesFilters = memo((props: ArticlesFiltersProps) => {
     return (
         <Card
             padding="24"
-            className={classNames(cls.ArticlesFilters, {}, [
-                className,
-                ...getVStack({ gap: '32' }),
-            ])}
+            stackProps={getVStack({ gap: '32' })}
+            className={classNames(cls.ArticlesFilters, {}, [className])}
         >
             <Input
                 value={search}

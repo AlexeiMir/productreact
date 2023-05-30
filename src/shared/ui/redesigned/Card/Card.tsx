@@ -1,6 +1,11 @@
 import { HTMLAttributes, ReactNode } from 'react';
 
-import { FlexAlign, FlexDirection, FlexJustify } from '../Stack/Flex/Flex';
+import {
+    Flex,
+    FlexAlign,
+    FlexDirection,
+    FlexJustify,
+} from '../Stack/Flex/Flex';
 
 import cls from './Card.module.scss';
 
@@ -11,6 +16,12 @@ export type CardPadding = '0' | '8' | '16' | '24' | '32';
 export type CardGap = '8' | '16' | '24' | '32';
 export type CardBorder = 'round' | 'normal';
 
+interface GetStackProps {
+    justify?: FlexJustify;
+    align?: FlexAlign;
+    gap?: CardGap;
+    direction?: FlexDirection;
+}
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
     className?: string;
     children: ReactNode;
@@ -18,6 +29,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     max?: boolean;
     padding?: CardPadding;
     border?: CardBorder;
+    stackProps?: GetStackProps;
 }
 
 const mapPaddingToClass: Record<CardPadding, string> = {
@@ -28,32 +40,18 @@ const mapPaddingToClass: Record<CardPadding, string> = {
     '32': 'padding_32',
 };
 
-const mapGapToClass: Record<CardGap, string> = {
-    '8': 'gap_8',
-    '16': 'gap_16',
-    '24': 'gap_24',
-    '32': 'gap_32',
-};
-
-interface GetHStackProps {
-    justify?: FlexJustify;
-    align?: FlexAlign;
-    gap?: CardGap;
-    direction?: FlexDirection;
-}
-
 export function getHStack({
     justify,
     gap,
     direction = 'row',
     align,
-}: GetHStackProps) {
-    return [
-        justify && cls[`justify__${justify}`],
-        align && cls[`align__${align}`],
-        cls[`direction__${direction}`],
-        gap && cls[mapGapToClass[gap]],
-    ];
+}: GetStackProps) {
+    return {
+        justify,
+        gap,
+        direction,
+        align,
+    };
 }
 
 export function getVStack({
@@ -61,13 +59,13 @@ export function getVStack({
     gap,
     direction = 'column',
     align,
-}: GetHStackProps) {
-    return [
-        justify && cls[`justify__${justify}`],
-        align && cls[`align__${align}`],
-        cls[`direction__${direction}`],
-        gap && cls[mapGapToClass[gap]],
-    ];
+}: GetStackProps) {
+    return {
+        justify,
+        gap,
+        direction,
+        align,
+    };
 }
 
 const Card = (props: CardProps) => {
@@ -78,12 +76,13 @@ const Card = (props: CardProps) => {
         variant = 'normal',
         border = 'normal',
         padding = '8',
+        stackProps,
         ...otherProps
     } = props;
 
     const paddingClass = mapPaddingToClass[padding];
     return (
-        <div
+        <Flex
             className={classNames(cls.Card, { [cls.max]: max }, [
                 className,
                 cls[variant],
@@ -91,9 +90,10 @@ const Card = (props: CardProps) => {
                 cls[border],
             ])}
             {...otherProps}
+            {...stackProps}
         >
             {children}
-        </div>
+        </Flex>
     );
 };
 
