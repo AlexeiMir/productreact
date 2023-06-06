@@ -19,6 +19,12 @@ interface ArticleListItemSkeletonProps {
 const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
     const { className, view } = props;
 
+    const mainClass = toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => cls.ArticleListItemRedesigned,
+        off: () => cls.ArticleListItem,
+    });
+
     const Skeleton = toggleFeatures({
         name: 'isAppRedesigned',
         on: () => SkeletonRedesigned,
@@ -33,12 +39,7 @@ const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
 
     if (view === ArticleView.LIST) {
         return (
-            <div
-                className={classNames(cls.ArticleListItem, {}, [
-                    className,
-                    cls[view],
-                ])}
-            >
+            <div className={classNames(mainClass, {}, [className, cls[view]])}>
                 <Card
                     className={cls.card}
                     stackProps={getVStack({ align: 'start' })}
@@ -67,12 +68,7 @@ const ArticleListItemSkeleton = memo((props: ArticleListItemSkeletonProps) => {
     }
 
     return (
-        <div
-            className={classNames(cls.ArticleListItem, {}, [
-                className,
-                cls[view],
-            ])}
-        >
+        <div className={classNames(mainClass, {}, [className, cls[view]])}>
             <Card
                 className={cls.card}
                 stackProps={getVStack({ align: 'start' })}

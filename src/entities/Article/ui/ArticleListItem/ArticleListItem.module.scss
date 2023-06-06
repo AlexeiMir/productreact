@@ -39,6 +39,17 @@
     }
 }
 
+.ArticleListItemRedesigned {
+    &.LIST {
+        width: 100%;
+    }
+
+    &.GRID {
+        width: 240px;
+        height: 340px;
+    }
+}
+
 .GRID {
     width: 230px;
     transition: 0.2s;
