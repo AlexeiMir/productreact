@@ -5,10 +5,7 @@ interface PortalProps {
     children: ReactNode;
     elem?: HTMLElement;
 }
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
+
 const Portal = (props: PortalProps) => {
     const { children, elem = document.body } = props;
 
