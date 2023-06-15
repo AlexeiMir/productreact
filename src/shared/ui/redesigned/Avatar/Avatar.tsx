@@ -1,9 +1,11 @@
-import { CSSProperties, useMemo } from 'react';
+import { CSSProperties, ReactNode, useMemo } from 'react';
 
 import UserIcon from '../../../asserts/icons/user-filled.svg';
 import { AppImage } from '../../redesigned/AppImage';
 import { Icon } from '../Icon';
 import { Skeleton } from '../Skeleton';
+import { HStack } from '../Stack';
+import { FlexGap } from '../Stack/Flex/Flex';
 
 import cls from './Avatar.module.scss';
 
@@ -14,10 +16,12 @@ interface AvatarProps {
     src?: string;
     alt?: string;
     size?: number;
+    username?: ReactNode;
+    gap?: FlexGap;
 }
 
 const Avatar = (props: AvatarProps) => {
-    const { className, alt, size = 100, src } = props;
+    const { className, alt, size = 100, src, username, gap } = props;
 
     const mods: Mods = {};
 
@@ -31,8 +35,7 @@ const Avatar = (props: AvatarProps) => {
 
     const fallback = <Skeleton width={size} height={size} border="50%" />;
     const errorFallback = <Icon width={size} height={size} Svg={UserIcon} />;
-
-    return (
+    const appImage = (
         <AppImage
             style={styles}
             src={src}
@@ -42,6 +45,17 @@ const Avatar = (props: AvatarProps) => {
             className={classNames(cls.Avatar, mods, [className])}
         />
     );
+
+    if (username) {
+        return (
+            <HStack gap={gap}>
+                {appImage}
+                {username}
+            </HStack>
+        );
+    }
+
+    return appImage;
 };
 
 export { Avatar };
