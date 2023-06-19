@@ -6,7 +6,9 @@ import { ArticleTextBlock } from '../../model/types/article';
 import cls from './ArticleTextBlockComponent.module.scss';
 
 import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { ToggleFeatures } from '@/shared/lib/features';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -24,13 +26,34 @@ const ArticleTextBlockComponent = memo(
                 ])}
             >
                 {block.title && (
-                    <Text className={cls.title} title={block.title} />
+                    <ToggleFeatures
+                        feature="isAppRedesigned"
+                        off={
+                            <TextDeprecated
+                                className={cls.title}
+                                title={block.title}
+                            />
+                        }
+                        on={<Text className={cls.title} title={block.title} />}
+                    />
                 )}
                 {block.paragraphs.map((paragraph) => (
-                    <Text
-                        key={paragraph}
-                        text={paragraph}
-                        className={cls.paragraph}
+                    <ToggleFeatures
+                        feature="isAppRedesigned"
+                        off={
+                            <TextDeprecated
+                                key={paragraph}
+                                text={paragraph}
+                                className={cls.paragraph}
+                            />
+                        }
+                        on={
+                            <Text
+                                key={paragraph}
+                                text={paragraph}
+                                className={cls.paragraph}
+                            />
+                        }
                     />
                 ))}
             </div>

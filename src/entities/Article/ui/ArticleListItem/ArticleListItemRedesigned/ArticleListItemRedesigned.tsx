@@ -25,7 +25,11 @@ const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { t } = useTranslation();
     const userInfo = (
         <>
-            <Avatar size={30} src={article.user.avatar} />
+            <Avatar
+                size={30}
+                src={article.user.avatar}
+                className={cls.avatar}
+            />
             <Text bold text={article.user.username} className={cls.username} />
         </>
     );
@@ -99,11 +103,12 @@ const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             <Card
                 className={cls.card}
                 border="round"
-                stackProps={getVStack({ gap: '8' })}
+                padding="0"
+                stackProps={getVStack({ gap: '8', align: 'stretch' })}
             >
                 <AppImage
                     src={article.img}
-                    fallback={<Skeleton width={200} height={200} />}
+                    fallback={<Skeleton width="100%" height={200} />}
                     alt={article.title}
                     className={cls.img}
                 />

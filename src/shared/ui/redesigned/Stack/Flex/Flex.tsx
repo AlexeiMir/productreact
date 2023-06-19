@@ -11,7 +11,7 @@ import cls from './Flex.module.scss';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-export type FlexAlign = 'start' | 'center' | 'end';
+export type FlexAlign = 'start' | 'center' | 'end' | 'stretch';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '24' | '32';
 export type FlexWrap = 'nowrap' | 'wrap';
