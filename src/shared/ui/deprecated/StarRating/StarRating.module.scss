@@ -3,13 +3,19 @@
 }
 
 .StarRating {
-    .normal {
-        fill: none;
-    }
-
     .hovered {
         fill: var(--primary-color);
     }
+}
+
+.StarRatingRedesigned {
+    .hovered {
+        fill: var(--icon-redesigned);
+    }
+}
+
+.normal {
+    fill: none;
 }
 
 .selected {

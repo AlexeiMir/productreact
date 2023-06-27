@@ -7,11 +7,8 @@ import {
     useRateArticle,
 } from '../../api/articleRatingApi';
 
-import cls from './ArticleRating.module.scss';
-
 import { RatingCard } from '@/entities/Rating';
 import { getUserAuthData } from '@/entities/User';
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
 
 export interface ArticleRatingProps {
@@ -65,18 +62,16 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
 
     const rating = data?.[0];
     return (
-        <div className={classNames(cls.ArticleRating, {}, [className])}>
-            <RatingCard
-                feedbackTitle={t(
-                    'Оставьте свой отзыв о статье, это поможет улучшить качество',
-                )}
-                title={t('Оцените статью')}
-                rate={rating?.rate}
-                className={className}
-                onAccept={onAccept}
-                onCancel={onCancel}
-            />
-        </div>
+        <RatingCard
+            feedbackTitle={t(
+                'Оставьте свой отзыв о статье, это поможет улучшить качество',
+            )}
+            title={t('Оцените статью')}
+            rate={rating?.rate}
+            className={className}
+            onAccept={onAccept}
+            onCancel={onCancel}
+        />
     );
 });
 

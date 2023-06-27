@@ -24,11 +24,13 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { ToggleFeatures } from '@/shared/lib/features';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { Loader } from '@/shared/ui/deprecated/Loader';
-import { Text, TextSize } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { VStack } from '@/shared/ui/redesigned/Stack';
+import { Text } from '@/shared/ui/redesigned/Text';
 
 interface ArticleDetailsCommentProps {
     className?: string;
@@ -67,7 +69,16 @@ const ArticleDetailsComment = memo((props: ArticleDetailsCommentProps) => {
 
     return (
         <VStack gap="8" max className={classNames('', {}, [className])}>
-            <Text size={TextSize.L} title={t('Комментарии')} />
+            <ToggleFeatures
+                feature="isAppRedesigned"
+                on={<Text size="l" title={t('Комментарии')} />}
+                off={
+                    <TextDeprecated
+                        size={TextSize.L}
+                        title={t('Комментарии')}
+                    />
+                }
+            />
             <Suspense fallback={<Loader />}>
                 <DynamicModuleLoader reducers={reducers}>
                     <AddCommentForm
