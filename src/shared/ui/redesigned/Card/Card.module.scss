@@ -8,6 +8,10 @@
     border-radius: 12px;
 }
 
+.partial {
+    border-radius: 20px;
+}
+
 .round {
     border-radius: 40px;
 }
@@ -86,4 +90,12 @@
 
 .direction__column {
     flex-direction: column;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.fullWidth {
+    width: 100%;
 }

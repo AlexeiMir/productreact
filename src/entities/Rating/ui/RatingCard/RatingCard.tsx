@@ -197,7 +197,8 @@ const RatingCard = memo((props: RatingCardProps) => {
             on={
                 <Card
                     data-testid="RatingCard"
-                    max
+                    fullWidth
+                    border="partial"
                     className={classNames('', {}, [className])}
                 >
                     {content}

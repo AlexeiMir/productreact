@@ -74,6 +74,8 @@ const ProfileCardRedesigned = (props: ProfileCardProps) => {
     return (
         <Card
             max
+            border="partial"
+            padding="24"
             stackProps={getVStack({ gap: '32' })}
             className={classNames('', {}, [className])}
         >

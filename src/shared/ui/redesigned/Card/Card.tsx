@@ -14,7 +14,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 export type CardVariant = 'normal' | 'outlined' | 'light';
 export type CardPadding = '0' | '8' | '16' | '24' | '32';
 export type CardGap = '8' | '16' | '24' | '32';
-export type CardBorder = 'round' | 'normal';
+export type CardBorder = 'round' | 'normal' | 'partial';
 
 interface GetStackProps {
     justify?: FlexJustify;
@@ -30,6 +30,8 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
     padding?: CardPadding;
     border?: CardBorder;
     stackProps?: GetStackProps;
+    fullWidth?: boolean;
+    fullHeight?: boolean;
 }
 
 const mapPaddingToClass: Record<CardPadding, string> = {
@@ -77,18 +79,23 @@ const Card = (props: CardProps) => {
         border = 'normal',
         padding = '8',
         stackProps,
+        fullWidth,
+        fullHeight,
         ...otherProps
     } = props;
 
     const paddingClass = mapPaddingToClass[padding];
     return (
         <Flex
-            className={classNames(cls.Card, { [cls.max]: max }, [
-                className,
-                cls[variant],
-                cls[paddingClass],
-                cls[border],
-            ])}
+            className={classNames(
+                cls.Card,
+                {
+                    [cls.max]: max,
+                    [cls.fullWidth]: fullWidth,
+                    [cls.fullHeight]: fullHeight,
+                },
+                [className, cls[variant], cls[paddingClass], cls[border]],
+            )}
             {...otherProps}
             {...stackProps}
         >

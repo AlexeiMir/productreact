@@ -119,7 +119,7 @@ const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     );
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
-            <VStack gap="8" max>
+            <VStack gap="16" max>
                 <EditableProfileCardHeader />
                 {errors?.length &&
                     errors.map((err) => (
